@@ -1,0 +1,37 @@
+{
+  "air_quality_2021_2022": {
+    "years": [
+      2021,
+      2022
+    ],
+    "archives": [
+      "epa_no2_2021.zip",
+      "epa_no2_2022.zip"
+    ],
+    "minimum_days_each_period": 300,
+    "minimum_observations_per_day": 18,
+    "latitude_bounds": [
+      25,
+      50
+    ],
+    "longitude_bounds": [
+      -125,
+      -66
+    ],
+    "geo_cut_lat": 39,
+    "geo_cut_lon": -100
+  },
+  "hydrology": {
+    "train_start": "1995-10-01",
+    "train_end": "2005-09-30",
+    "test_start": "2005-10-01",
+    "test_end": "2015-09-30",
+    "minimum_coverage_each_period": 0.9,
+    "target": "discharge_spec",
+    "geo_cut_lat": 53.5,
+    "geo_cut_lon": -2.5,
+    "negative_targets": "invalid",
+    "target_fit_transform": "log1p",
+    "output_transform": "maximum(0, expm1(prediction))"
+  }
+}

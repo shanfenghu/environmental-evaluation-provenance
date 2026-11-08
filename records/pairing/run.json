@@ -1,0 +1,68 @@
+{
+  "complete": true,
+  "reference_run_sha256": "2920aa4c4b5f4a8645685eda58f7b831e84dc3ebf325b60932af2d1235f8a40c",
+  "config": {
+    "run_name": "fresh-pairing-precision-v1",
+    "workloads": [
+      "air_quality_2021_2022",
+      "hydrology"
+    ],
+    "tasks": [
+      "dispersed",
+      "northern_edge"
+    ],
+    "banks": 12,
+    "folds": 5,
+    "seed": 2026110500,
+    "bootstrap_replicates": 3999,
+    "bootstrap_seed": 2026110581,
+    "reference_config": "configs/assessment-v1.json",
+    "reference_records": "records/reference",
+    "timing_scope": "resident inputs, shared fresh native fit charged to both query plans; alternate plan order; no cold-cache or deployed-system claim"
+  },
+  "recipes": {
+    "ridge": {
+      "kind": "ridge",
+      "alpha": 100.0
+    },
+    "boosting": {
+      "kind": "boosting",
+      "parameters": {
+        "loss": "absolute_error",
+        "max_iter": 100,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.1,
+        "early_stopping": false
+      }
+    }
+  },
+  "cases": [
+    {
+      "workload": "air_quality_2021_2022",
+      "task": "dispersed",
+      "record": "case-0-0.json",
+      "sha256": "4cb3981b31981956358efc8ca4a16fdd9444f2bcfad623c074a4d51e52336726"
+    },
+    {
+      "workload": "air_quality_2021_2022",
+      "task": "northern_edge",
+      "record": "case-0-1.json",
+      "sha256": "d51f7b82c3950ce393e971a164ee214cfc2d8ac07ac5d9e5a07565091c62777e"
+    },
+    {
+      "workload": "hydrology",
+      "task": "dispersed",
+      "record": "case-1-0.json",
+      "sha256": "1a3e18ab44b7b86b8b4462b3397917db3063c7cc6010609ca83cfadbc5973b7d"
+    },
+    {
+      "workload": "hydrology",
+      "task": "northern_edge",
+      "record": "case-1-1.json",
+      "sha256": "78f44060443a6f7a40c6df70556ab4c10237318f1dcd7e73ef4fc6a77a75c9fd"
+    }
+  ],
+  "scope": "Fresh conditional assignments of inspected records; paired resident native query costs; not new environmental data or a cold-cache benchmark"
+}

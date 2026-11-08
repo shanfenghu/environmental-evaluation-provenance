@@ -1,0 +1,3234 @@
+{
+  "domain": "air_quality",
+  "years": [
+    2021,
+    2022
+  ],
+  "entities": [
+    {
+      "id": "01-073-0023",
+      "latitude": 33.553056,
+      "longitude": -86.815,
+      "cell": 1,
+      "train_rows": 314,
+      "later_rows": 314,
+      "poc": "1"
+    },
+    {
+      "id": "01-073-2059",
+      "latitude": 33.521427,
+      "longitude": -86.844112,
+      "cell": 1,
+      "train_rows": 342,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "04-013-0019",
+      "latitude": 33.48378,
+      "longitude": -112.14256,
+      "cell": 0,
+      "train_rows": 361,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "04-013-3002",
+      "latitude": 33.45797,
+      "longitude": -112.04659,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 353,
+      "poc": "6"
+    },
+    {
+      "id": "04-013-4011",
+      "latitude": 33.36985,
+      "longitude": -112.62068,
+      "cell": 0,
+      "train_rows": 365,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "04-013-4020",
+      "latitude": 33.46173,
+      "longitude": -112.12796,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "04-013-9997",
+      "latitude": 33.503833,
+      "longitude": -112.095767,
+      "cell": 0,
+      "train_rows": 357,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "04-019-1011",
+      "latitude": 32.204411,
+      "longitude": -110.878067,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "04-019-1028",
+      "latitude": 32.29515,
+      "longitude": -110.9823,
+      "cell": 0,
+      "train_rows": 358,
+      "later_rows": 342,
+      "poc": "1"
+    },
+    {
+      "id": "05-035-0005",
+      "latitude": 35.197288,
+      "longitude": -90.193141,
+      "cell": 1,
+      "train_rows": 365,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "05-119-0007",
+      "latitude": 34.756189,
+      "longitude": -92.281296,
+      "cell": 1,
+      "train_rows": 365,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "06-001-0007",
+      "latitude": 37.687526,
+      "longitude": -121.784217,
+      "cell": 0,
+      "train_rows": 363,
+      "later_rows": 345,
+      "poc": "1"
+    },
+    {
+      "id": "06-001-0009",
+      "latitude": 37.743065,
+      "longitude": -122.169935,
+      "cell": 0,
+      "train_rows": 360,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "06-001-0011",
+      "latitude": 37.814781,
+      "longitude": -122.282347,
+      "cell": 0,
+      "train_rows": 358,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "06-001-0012",
+      "latitude": 37.793624,
+      "longitude": -122.263376,
+      "cell": 0,
+      "train_rows": 348,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "06-001-0015",
+      "latitude": 37.701222,
+      "longitude": -121.903019,
+      "cell": 0,
+      "train_rows": 361,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "06-007-0008",
+      "latitude": 39.76168,
+      "longitude": -121.84047,
+      "cell": 2,
+      "train_rows": 351,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "06-013-0002",
+      "latitude": 37.936013,
+      "longitude": -122.026154,
+      "cell": 0,
+      "train_rows": 349,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "06-013-1002",
+      "latitude": 38.006311,
+      "longitude": -121.641918,
+      "cell": 0,
+      "train_rows": 349,
+      "later_rows": 335,
+      "poc": "1"
+    },
+    {
+      "id": "06-013-1004",
+      "latitude": 37.9604,
+      "longitude": -122.356811,
+      "cell": 0,
+      "train_rows": 356,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "06-013-2007",
+      "latitude": 37.743649,
+      "longitude": -121.934188,
+      "cell": 0,
+      "train_rows": 354,
+      "later_rows": 338,
+      "poc": "1"
+    },
+    {
+      "id": "06-019-0007",
+      "latitude": 36.705474,
+      "longitude": -119.741332,
+      "cell": 0,
+      "train_rows": 351,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "06-019-0011",
+      "latitude": 36.78538,
+      "longitude": -119.77321,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 326,
+      "poc": "3"
+    },
+    {
+      "id": "06-019-0242",
+      "latitude": 36.841592,
+      "longitude": -119.874739,
+      "cell": 0,
+      "train_rows": 360,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "06-019-2016",
+      "latitude": 36.710833,
+      "longitude": -119.7775,
+      "cell": 0,
+      "train_rows": 361,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "06-019-4001",
+      "latitude": 36.597442,
+      "longitude": -119.503659,
+      "cell": 0,
+      "train_rows": 345,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-019-5001",
+      "latitude": 36.819449,
+      "longitude": -119.716433,
+      "cell": 0,
+      "train_rows": 363,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "06-023-1004",
+      "latitude": 40.77678,
+      "longitude": -124.17949,
+      "cell": 2,
+      "train_rows": 326,
+      "later_rows": 327,
+      "poc": "1"
+    },
+    {
+      "id": "06-025-0005",
+      "latitude": 32.67618,
+      "longitude": -115.48307,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "06-025-1003",
+      "latitude": 32.79222,
+      "longitude": -115.56306,
+      "cell": 0,
+      "train_rows": 339,
+      "later_rows": 326,
+      "poc": "1"
+    },
+    {
+      "id": "06-029-0007",
+      "latitude": 35.345607,
+      "longitude": -118.851825,
+      "cell": 0,
+      "train_rows": 363,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-029-0014",
+      "latitude": 35.356615,
+      "longitude": -119.062613,
+      "cell": 0,
+      "train_rows": 363,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "06-029-2012",
+      "latitude": 35.331612,
+      "longitude": -118.999961,
+      "cell": 0,
+      "train_rows": 348,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "06-029-2019",
+      "latitude": 35.376953,
+      "longitude": -119.043889,
+      "cell": 0,
+      "train_rows": 316,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "06-029-6001",
+      "latitude": 35.503587,
+      "longitude": -119.272606,
+      "cell": 0,
+      "train_rows": 330,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-031-1004",
+      "latitude": 36.31567,
+      "longitude": -119.643447,
+      "cell": 0,
+      "train_rows": 342,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-0016",
+      "latitude": 34.14435,
+      "longitude": -117.85036,
+      "cell": 0,
+      "train_rows": 352,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-0113",
+      "latitude": 34.05111,
+      "longitude": -118.45636,
+      "cell": 0,
+      "train_rows": 360,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-1103",
+      "latitude": 34.06659,
+      "longitude": -118.22688,
+      "cell": 0,
+      "train_rows": 356,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-1201",
+      "latitude": 34.19925,
+      "longitude": -118.53276,
+      "cell": 0,
+      "train_rows": 361,
+      "later_rows": 364,
+      "poc": "2"
+    },
+    {
+      "id": "06-037-1302",
+      "latitude": 33.901389,
+      "longitude": -118.205,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-1602",
+      "latitude": 34.01029,
+      "longitude": -118.0685,
+      "cell": 0,
+      "train_rows": 361,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-1701",
+      "latitude": 34.06703,
+      "longitude": -117.7514,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 361,
+      "poc": "2"
+    },
+    {
+      "id": "06-037-2005",
+      "latitude": 34.1326,
+      "longitude": -118.1272,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-4008",
+      "latitude": 33.859662,
+      "longitude": -118.200707,
+      "cell": 0,
+      "train_rows": 351,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-4009",
+      "latitude": 33.793713,
+      "longitude": -118.171019,
+      "cell": 0,
+      "train_rows": 361,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-4010",
+      "latitude": 34.181977,
+      "longitude": -118.363036,
+      "cell": 0,
+      "train_rows": 359,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-6012",
+      "latitude": 34.38344,
+      "longitude": -118.5284,
+      "cell": 0,
+      "train_rows": 365,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "06-037-9033",
+      "latitude": 34.669739,
+      "longitude": -118.130511,
+      "cell": 0,
+      "train_rows": 355,
+      "later_rows": 346,
+      "poc": "1"
+    },
+    {
+      "id": "06-039-0004",
+      "latitude": 36.867125,
+      "longitude": -120.010158,
+      "cell": 0,
+      "train_rows": 358,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "06-041-0001",
+      "latitude": 37.97231,
+      "longitude": -122.520004,
+      "cell": 0,
+      "train_rows": 362,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-047-0003",
+      "latitude": 37.281853,
+      "longitude": -120.433671,
+      "cell": 0,
+      "train_rows": 339,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-053-1003",
+      "latitude": 36.694261,
+      "longitude": -121.623271,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 300,
+      "poc": "1"
+    },
+    {
+      "id": "06-059-0007",
+      "latitude": 33.83062,
+      "longitude": -117.93845,
+      "cell": 0,
+      "train_rows": 356,
+      "later_rows": 364,
+      "poc": "5"
+    },
+    {
+      "id": "06-059-0008",
+      "latitude": 33.819305,
+      "longitude": -117.918759,
+      "cell": 0,
+      "train_rows": 343,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "06-059-5001",
+      "latitude": 33.92513,
+      "longitude": -117.95264,
+      "cell": 0,
+      "train_rows": 346,
+      "later_rows": 364,
+      "poc": "2"
+    },
+    {
+      "id": "06-061-0006",
+      "latitude": 38.74643,
+      "longitude": -121.26498,
+      "cell": 0,
+      "train_rows": 352,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "06-065-0009",
+      "latitude": 33.447867,
+      "longitude": -117.088649,
+      "cell": 0,
+      "train_rows": 351,
+      "later_rows": 337,
+      "poc": "1"
+    },
+    {
+      "id": "06-065-0012",
+      "latitude": 33.92086,
+      "longitude": -116.85841,
+      "cell": 0,
+      "train_rows": 365,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "06-065-5001",
+      "latitude": 33.85275,
+      "longitude": -116.54101,
+      "cell": 0,
+      "train_rows": 360,
+      "later_rows": 365,
+      "poc": "2"
+    },
+    {
+      "id": "06-065-8001",
+      "latitude": 33.99958,
+      "longitude": -117.41601,
+      "cell": 0,
+      "train_rows": 350,
+      "later_rows": 358,
+      "poc": "3"
+    },
+    {
+      "id": "06-065-8005",
+      "latitude": 33.99636,
+      "longitude": -117.4924,
+      "cell": 0,
+      "train_rows": 365,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "06-065-9001",
+      "latitude": 33.67649,
+      "longitude": -117.33098,
+      "cell": 0,
+      "train_rows": 357,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "06-067-0010",
+      "latitude": 38.56844,
+      "longitude": -121.49311,
+      "cell": 0,
+      "train_rows": 352,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "06-071-0001",
+      "latitude": 34.89405,
+      "longitude": -117.02471,
+      "cell": 0,
+      "train_rows": 352,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "06-071-0026",
+      "latitude": 34.06812,
+      "longitude": -117.52579,
+      "cell": 0,
+      "train_rows": 365,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "06-071-0027",
+      "latitude": 34.030833,
+      "longitude": -117.61722,
+      "cell": 0,
+      "train_rows": 350,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "06-071-0306",
+      "latitude": 34.510961,
+      "longitude": -117.32554,
+      "cell": 0,
+      "train_rows": 352,
+      "later_rows": 351,
+      "poc": "1"
+    },
+    {
+      "id": "06-071-1004",
+      "latitude": 34.10374,
+      "longitude": -117.62914,
+      "cell": 0,
+      "train_rows": 354,
+      "later_rows": 363,
+      "poc": "2"
+    },
+    {
+      "id": "06-071-1234",
+      "latitude": 35.77446,
+      "longitude": -117.3721,
+      "cell": 0,
+      "train_rows": 344,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "06-071-2002",
+      "latitude": 34.10002,
+      "longitude": -117.49201,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "06-071-9004",
+      "latitude": 34.106678,
+      "longitude": -117.274063,
+      "cell": 0,
+      "train_rows": 362,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-073-1022",
+      "latitude": 32.789565,
+      "longitude": -116.944308,
+      "cell": 0,
+      "train_rows": 347,
+      "later_rows": 347,
+      "poc": "2"
+    },
+    {
+      "id": "06-075-0005",
+      "latitude": 37.765946,
+      "longitude": -122.399044,
+      "cell": 0,
+      "train_rows": 356,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "06-077-3005",
+      "latitude": 37.682635,
+      "longitude": -121.442495,
+      "cell": 0,
+      "train_rows": 346,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "06-079-4002",
+      "latitude": 35.03146,
+      "longitude": -120.50103,
+      "cell": 0,
+      "train_rows": 360,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "06-081-1001",
+      "latitude": 37.482934,
+      "longitude": -122.20337,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "06-083-1021",
+      "latitude": 34.403052,
+      "longitude": -119.457914,
+      "cell": 0,
+      "train_rows": 335,
+      "later_rows": 306,
+      "poc": "1"
+    },
+    {
+      "id": "06-083-1025",
+      "latitude": 34.48974,
+      "longitude": -120.04692,
+      "cell": 0,
+      "train_rows": 337,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "06-083-2004",
+      "latitude": 34.63782,
+      "longitude": -120.4575,
+      "cell": 0,
+      "train_rows": 356,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-085-0005",
+      "latitude": 37.348497,
+      "longitude": -121.894898,
+      "cell": 0,
+      "train_rows": 358,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "06-085-0006",
+      "latitude": 37.338135,
+      "longitude": -121.849783,
+      "cell": 0,
+      "train_rows": 365,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "06-095-0004",
+      "latitude": 38.102507,
+      "longitude": -122.237976,
+      "cell": 0,
+      "train_rows": 336,
+      "later_rows": 338,
+      "poc": "1"
+    },
+    {
+      "id": "06-097-0004",
+      "latitude": 38.403765,
+      "longitude": -122.818294,
+      "cell": 0,
+      "train_rows": 358,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "06-099-0006",
+      "latitude": 37.488317,
+      "longitude": -120.836008,
+      "cell": 0,
+      "train_rows": 363,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "06-101-0003",
+      "latitude": 39.138773,
+      "longitude": -121.618549,
+      "cell": 2,
+      "train_rows": 345,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "06-111-2002",
+      "latitude": 34.276316,
+      "longitude": -118.683685,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "06-111-3001",
+      "latitude": 34.25239,
+      "longitude": -119.143182,
+      "cell": 0,
+      "train_rows": 356,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "06-113-0004",
+      "latitude": 38.53445,
+      "longitude": -121.7734,
+      "cell": 0,
+      "train_rows": 345,
+      "later_rows": 302,
+      "poc": "1"
+    },
+    {
+      "id": "08-001-3001",
+      "latitude": 39.838119,
+      "longitude": -104.94984,
+      "cell": 2,
+      "train_rows": 316,
+      "later_rows": 314,
+      "poc": "1"
+    },
+    {
+      "id": "08-007-7004",
+      "latitude": 37.205862,
+      "longitude": -107.254118,
+      "cell": 0,
+      "train_rows": 350,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "08-031-0002",
+      "latitude": 39.751184,
+      "longitude": -104.987625,
+      "cell": 2,
+      "train_rows": 340,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "08-031-0026",
+      "latitude": 39.77949,
+      "longitude": -105.00518,
+      "cell": 2,
+      "train_rows": 331,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "08-031-0027",
+      "latitude": 39.73217,
+      "longitude": -105.0153,
+      "cell": 2,
+      "train_rows": 330,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "08-031-0028",
+      "latitude": 39.7861,
+      "longitude": -104.9886,
+      "cell": 2,
+      "train_rows": 358,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "08-059-0006",
+      "latitude": 39.912799,
+      "longitude": -105.188587,
+      "cell": 2,
+      "train_rows": 359,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "08-067-1004",
+      "latitude": 37.30389,
+      "longitude": -107.484167,
+      "cell": 0,
+      "train_rows": 359,
+      "later_rows": 344,
+      "poc": "1"
+    },
+    {
+      "id": "08-067-7001",
+      "latitude": 37.13678,
+      "longitude": -107.62863,
+      "cell": 0,
+      "train_rows": 341,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "08-067-7003",
+      "latitude": 37.10258,
+      "longitude": -107.870219,
+      "cell": 0,
+      "train_rows": 333,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "08-103-0006",
+      "latitude": 40.086944,
+      "longitude": -108.761389,
+      "cell": 2,
+      "train_rows": 354,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "08-123-0013",
+      "latitude": 40.181625,
+      "longitude": -104.72613,
+      "cell": 2,
+      "train_rows": 340,
+      "later_rows": 339,
+      "poc": "1"
+    },
+    {
+      "id": "09-001-9003",
+      "latitude": 41.118333,
+      "longitude": -73.336667,
+      "cell": 3,
+      "train_rows": 356,
+      "later_rows": 339,
+      "poc": "1"
+    },
+    {
+      "id": "09-003-0025",
+      "latitude": 41.771444,
+      "longitude": -72.679923,
+      "cell": 3,
+      "train_rows": 361,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "09-003-1003",
+      "latitude": 41.784722,
+      "longitude": -72.631667,
+      "cell": 3,
+      "train_rows": 350,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "09-009-0027",
+      "latitude": 41.3014,
+      "longitude": -72.902871,
+      "cell": 3,
+      "train_rows": 356,
+      "later_rows": 349,
+      "poc": "1"
+    },
+    {
+      "id": "11-001-0041",
+      "latitude": 38.895572,
+      "longitude": -76.958072,
+      "cell": 1,
+      "train_rows": 352,
+      "later_rows": 338,
+      "poc": "1"
+    },
+    {
+      "id": "11-001-0043",
+      "latitude": 38.921847,
+      "longitude": -77.013178,
+      "cell": 1,
+      "train_rows": 364,
+      "later_rows": 361,
+      "poc": "2"
+    },
+    {
+      "id": "11-001-0051",
+      "latitude": 38.89477,
+      "longitude": -76.953426,
+      "cell": 1,
+      "train_rows": 353,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "12-011-0035",
+      "latitude": 26.132677,
+      "longitude": -80.169817,
+      "cell": 1,
+      "train_rows": 324,
+      "later_rows": 346,
+      "poc": "1"
+    },
+    {
+      "id": "12-011-8002",
+      "latitude": 26.087567,
+      "longitude": -80.111152,
+      "cell": 1,
+      "train_rows": 324,
+      "later_rows": 339,
+      "poc": "1"
+    },
+    {
+      "id": "12-031-0032",
+      "latitude": 30.356339,
+      "longitude": -81.635396,
+      "cell": 1,
+      "train_rows": 344,
+      "later_rows": 352,
+      "poc": "2"
+    },
+    {
+      "id": "12-031-0108",
+      "latitude": 30.262778,
+      "longitude": -81.606833,
+      "cell": 1,
+      "train_rows": 340,
+      "later_rows": 334,
+      "poc": "1"
+    },
+    {
+      "id": "12-057-0113",
+      "latitude": 27.95555,
+      "longitude": -82.46958,
+      "cell": 1,
+      "train_rows": 336,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "12-086-0027",
+      "latitude": 25.732878,
+      "longitude": -80.16175,
+      "cell": 1,
+      "train_rows": 305,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "12-086-0035",
+      "latitude": 25.785472,
+      "longitude": -80.284206,
+      "cell": 1,
+      "train_rows": 327,
+      "later_rows": 337,
+      "poc": "1"
+    },
+    {
+      "id": "12-103-0018",
+      "latitude": 27.791304,
+      "longitude": -82.739593,
+      "cell": 1,
+      "train_rows": 358,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "12-103-0027",
+      "latitude": 27.834409,
+      "longitude": -82.665251,
+      "cell": 1,
+      "train_rows": 364,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "13-089-0003",
+      "latitude": 33.698643,
+      "longitude": -84.272614,
+      "cell": 1,
+      "train_rows": 363,
+      "later_rows": 345,
+      "poc": "1"
+    },
+    {
+      "id": "13-121-0056",
+      "latitude": 33.7784,
+      "longitude": -84.3914,
+      "cell": 1,
+      "train_rows": 362,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "16-001-0010",
+      "latitude": 43.600699,
+      "longitude": -116.347853,
+      "cell": 2,
+      "train_rows": 341,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "17-031-0119",
+      "latitude": 41.57862,
+      "longitude": -87.557406,
+      "cell": 3,
+      "train_rows": 361,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "17-031-0219",
+      "latitude": 41.920009,
+      "longitude": -87.672995,
+      "cell": 3,
+      "train_rows": 358,
+      "later_rows": 344,
+      "poc": "1"
+    },
+    {
+      "id": "17-031-3103",
+      "latitude": 41.965193,
+      "longitude": -87.876265,
+      "cell": 3,
+      "train_rows": 362,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "17-031-4002",
+      "latitude": 41.855243,
+      "longitude": -87.75247,
+      "cell": 3,
+      "train_rows": 328,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "17-117-0002",
+      "latitude": 39.396075,
+      "longitude": -89.809739,
+      "cell": 3,
+      "train_rows": 358,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "17-163-0010",
+      "latitude": 38.612034,
+      "longitude": -90.160477,
+      "cell": 1,
+      "train_rows": 365,
+      "later_rows": 365,
+      "poc": "2"
+    },
+    {
+      "id": "18-089-0022",
+      "latitude": 41.606662,
+      "longitude": -87.304943,
+      "cell": 3,
+      "train_rows": 365,
+      "later_rows": 359,
+      "poc": "2"
+    },
+    {
+      "id": "18-097-0078",
+      "latitude": 39.810833,
+      "longitude": -86.114444,
+      "cell": 3,
+      "train_rows": 353,
+      "later_rows": 355,
+      "poc": "3"
+    },
+    {
+      "id": "18-097-0087",
+      "latitude": 39.787933,
+      "longitude": -86.13088,
+      "cell": 3,
+      "train_rows": 330,
+      "later_rows": 362,
+      "poc": "2"
+    },
+    {
+      "id": "18-141-0015",
+      "latitude": 41.69666,
+      "longitude": -86.214722,
+      "cell": 3,
+      "train_rows": 303,
+      "later_rows": 363,
+      "poc": "2"
+    },
+    {
+      "id": "18-163-0021",
+      "latitude": 38.013333,
+      "longitude": -87.577222,
+      "cell": 1,
+      "train_rows": 333,
+      "later_rows": 365,
+      "poc": "2"
+    },
+    {
+      "id": "19-153-0030",
+      "latitude": 41.603159,
+      "longitude": -93.643118,
+      "cell": 3,
+      "train_rows": 359,
+      "later_rows": 348,
+      "poc": "1"
+    },
+    {
+      "id": "19-177-0006",
+      "latitude": 40.695078,
+      "longitude": -92.006318,
+      "cell": 3,
+      "train_rows": 303,
+      "later_rows": 344,
+      "poc": "1"
+    },
+    {
+      "id": "20-173-0010",
+      "latitude": 37.702066,
+      "longitude": -97.314847,
+      "cell": 1,
+      "train_rows": 358,
+      "later_rows": 337,
+      "poc": "3"
+    },
+    {
+      "id": "20-191-0002",
+      "latitude": 37.47689,
+      "longitude": -97.366399,
+      "cell": 1,
+      "train_rows": 365,
+      "later_rows": 328,
+      "poc": "1"
+    },
+    {
+      "id": "21-019-0017",
+      "latitude": 38.45934,
+      "longitude": -82.64041,
+      "cell": 1,
+      "train_rows": 346,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "21-037-3002",
+      "latitude": 39.021881,
+      "longitude": -84.47445,
+      "cell": 3,
+      "train_rows": 342,
+      "later_rows": 349,
+      "poc": "1"
+    },
+    {
+      "id": "21-059-0005",
+      "latitude": 37.780776,
+      "longitude": -87.075307,
+      "cell": 1,
+      "train_rows": 352,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "21-067-0012",
+      "latitude": 38.06503,
+      "longitude": -84.49761,
+      "cell": 1,
+      "train_rows": 305,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "21-111-0067",
+      "latitude": 38.22876,
+      "longitude": -85.65452,
+      "cell": 1,
+      "train_rows": 359,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "21-111-0075",
+      "latitude": 38.1936,
+      "longitude": -85.7119,
+      "cell": 1,
+      "train_rows": 345,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "22-005-0004",
+      "latitude": 30.229653,
+      "longitude": -90.965628,
+      "cell": 1,
+      "train_rows": 336,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "22-019-0008",
+      "latitude": 30.262347,
+      "longitude": -93.284906,
+      "cell": 1,
+      "train_rows": 341,
+      "later_rows": 347,
+      "poc": "1"
+    },
+    {
+      "id": "22-033-0009",
+      "latitude": 30.461981,
+      "longitude": -91.179219,
+      "cell": 1,
+      "train_rows": 345,
+      "later_rows": 339,
+      "poc": "1"
+    },
+    {
+      "id": "22-033-0013",
+      "latitude": 30.700895,
+      "longitude": -91.056068,
+      "cell": 1,
+      "train_rows": 361,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "22-047-0009",
+      "latitude": 30.221255,
+      "longitude": -91.315418,
+      "cell": 1,
+      "train_rows": 343,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "22-051-1001",
+      "latitude": 30.041238,
+      "longitude": -90.272826,
+      "cell": 1,
+      "train_rows": 322,
+      "later_rows": 346,
+      "poc": "1"
+    },
+    {
+      "id": "22-071-0021",
+      "latitude": 29.996013,
+      "longitude": -90.11819,
+      "cell": 1,
+      "train_rows": 325,
+      "later_rows": 351,
+      "poc": "1"
+    },
+    {
+      "id": "22-121-0001",
+      "latitude": 30.500642,
+      "longitude": -91.213556,
+      "cell": 1,
+      "train_rows": 346,
+      "later_rows": 333,
+      "poc": "1"
+    },
+    {
+      "id": "23-005-0029",
+      "latitude": 43.660246,
+      "longitude": -70.268965,
+      "cell": 3,
+      "train_rows": 355,
+      "later_rows": 341,
+      "poc": "1"
+    },
+    {
+      "id": "24-005-0009",
+      "latitude": 39.371679,
+      "longitude": -76.746814,
+      "cell": 3,
+      "train_rows": 358,
+      "later_rows": 361,
+      "poc": "4"
+    },
+    {
+      "id": "24-005-3001",
+      "latitude": 39.310833,
+      "longitude": -76.474444,
+      "cell": 3,
+      "train_rows": 360,
+      "later_rows": 353,
+      "poc": "4"
+    },
+    {
+      "id": "24-023-0002",
+      "latitude": 39.70595,
+      "longitude": -79.012,
+      "cell": 3,
+      "train_rows": 363,
+      "later_rows": 355,
+      "poc": "4"
+    },
+    {
+      "id": "24-027-0006",
+      "latitude": 39.14313,
+      "longitude": -76.84611,
+      "cell": 3,
+      "train_rows": 363,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "24-033-0030",
+      "latitude": 39.055277,
+      "longitude": -76.878333,
+      "cell": 3,
+      "train_rows": 362,
+      "later_rows": 343,
+      "poc": "4"
+    },
+    {
+      "id": "25-013-0008",
+      "latitude": 42.19438,
+      "longitude": -72.555112,
+      "cell": 3,
+      "train_rows": 356,
+      "later_rows": 344,
+      "poc": "1"
+    },
+    {
+      "id": "25-013-0018",
+      "latitude": 42.120229,
+      "longitude": -72.584503,
+      "cell": 3,
+      "train_rows": 348,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "25-015-4002",
+      "latitude": 42.298493,
+      "longitude": -72.334079,
+      "cell": 3,
+      "train_rows": 340,
+      "later_rows": 351,
+      "poc": "1"
+    },
+    {
+      "id": "25-017-0010",
+      "latitude": 42.612085,
+      "longitude": -71.306986,
+      "cell": 3,
+      "train_rows": 358,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "25-021-3003",
+      "latitude": 42.211774,
+      "longitude": -71.11397,
+      "cell": 3,
+      "train_rows": 350,
+      "later_rows": 347,
+      "poc": "1"
+    },
+    {
+      "id": "25-025-0002",
+      "latitude": 42.348873,
+      "longitude": -71.097163,
+      "cell": 3,
+      "train_rows": 349,
+      "later_rows": 352,
+      "poc": "1"
+    },
+    {
+      "id": "25-025-0042",
+      "latitude": 42.3295,
+      "longitude": -71.0826,
+      "cell": 3,
+      "train_rows": 311,
+      "later_rows": 344,
+      "poc": "1"
+    },
+    {
+      "id": "25-025-0044",
+      "latitude": 42.325186,
+      "longitude": -71.056061,
+      "cell": 3,
+      "train_rows": 356,
+      "later_rows": 355,
+      "poc": "1"
+    },
+    {
+      "id": "25-027-0023",
+      "latitude": 42.263955,
+      "longitude": -71.794322,
+      "cell": 3,
+      "train_rows": 343,
+      "later_rows": 346,
+      "poc": "1"
+    },
+    {
+      "id": "26-065-0018",
+      "latitude": 42.76138,
+      "longitude": -84.562867,
+      "cell": 3,
+      "train_rows": 356,
+      "later_rows": 352,
+      "poc": "1"
+    },
+    {
+      "id": "26-081-0020",
+      "latitude": 42.984173,
+      "longitude": -85.671339,
+      "cell": 3,
+      "train_rows": 359,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "26-113-0001",
+      "latitude": 44.310555,
+      "longitude": -84.891865,
+      "cell": 3,
+      "train_rows": 355,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "26-163-0015",
+      "latitude": 42.302778,
+      "longitude": -83.106667,
+      "cell": 3,
+      "train_rows": 353,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "26-163-0019",
+      "latitude": 42.43084,
+      "longitude": -83.000138,
+      "cell": 3,
+      "train_rows": 326,
+      "later_rows": 356,
+      "poc": "3"
+    },
+    {
+      "id": "26-163-0093",
+      "latitude": 42.385998,
+      "longitude": -83.266189,
+      "cell": 3,
+      "train_rows": 334,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "26-163-0098",
+      "latitude": 42.312158,
+      "longitude": -83.091943,
+      "cell": 3,
+      "train_rows": 352,
+      "later_rows": 351,
+      "poc": "1"
+    },
+    {
+      "id": "26-163-0099",
+      "latitude": 42.295824,
+      "longitude": -83.129431,
+      "cell": 3,
+      "train_rows": 352,
+      "later_rows": 345,
+      "poc": "1"
+    },
+    {
+      "id": "26-163-1013",
+      "latitude": 42.388405,
+      "longitude": -82.979793,
+      "cell": 3,
+      "train_rows": 357,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "27-003-1002",
+      "latitude": 45.13768,
+      "longitude": -93.207615,
+      "cell": 3,
+      "train_rows": 343,
+      "later_rows": 348,
+      "poc": "1"
+    },
+    {
+      "id": "27-037-0020",
+      "latitude": 44.76323,
+      "longitude": -93.03255,
+      "cell": 3,
+      "train_rows": 315,
+      "later_rows": 352,
+      "poc": "1"
+    },
+    {
+      "id": "27-037-0423",
+      "latitude": 44.77553,
+      "longitude": -93.06299,
+      "cell": 3,
+      "train_rows": 337,
+      "later_rows": 348,
+      "poc": "1"
+    },
+    {
+      "id": "27-037-0480",
+      "latitude": 44.706123,
+      "longitude": -93.285803,
+      "cell": 3,
+      "train_rows": 322,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "27-137-7001",
+      "latitude": 47.523355,
+      "longitude": -92.536305,
+      "cell": 3,
+      "train_rows": 335,
+      "later_rows": 321,
+      "poc": "1"
+    },
+    {
+      "id": "28-059-0006",
+      "latitude": 30.378287,
+      "longitude": -88.53393,
+      "cell": 1,
+      "train_rows": 342,
+      "later_rows": 344,
+      "poc": "1"
+    },
+    {
+      "id": "29-095-0034",
+      "latitude": 39.104686,
+      "longitude": -94.57079,
+      "cell": 3,
+      "train_rows": 363,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "29-095-0042",
+      "latitude": 39.047911,
+      "longitude": -94.450513,
+      "cell": 3,
+      "train_rows": 364,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "29-137-0001",
+      "latitude": 39.474976,
+      "longitude": -91.788991,
+      "cell": 3,
+      "train_rows": 342,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "29-189-0016",
+      "latitude": 38.75264,
+      "longitude": -90.44884,
+      "cell": 1,
+      "train_rows": 365,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "29-510-0094",
+      "latitude": 38.63114,
+      "longitude": -90.28115,
+      "cell": 1,
+      "train_rows": 364,
+      "later_rows": 332,
+      "poc": "1"
+    },
+    {
+      "id": "30-027-0006",
+      "latitude": 47.048537,
+      "longitude": -109.455315,
+      "cell": 2,
+      "train_rows": 353,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "30-031-0017",
+      "latitude": 44.657014,
+      "longitude": -111.089618,
+      "cell": 2,
+      "train_rows": 311,
+      "later_rows": 348,
+      "poc": "5"
+    },
+    {
+      "id": "30-071-0010",
+      "latitude": 48.317507,
+      "longitude": -107.862471,
+      "cell": 2,
+      "train_rows": 351,
+      "later_rows": 343,
+      "poc": "1"
+    },
+    {
+      "id": "30-075-0001",
+      "latitude": 45.440295,
+      "longitude": -105.370283,
+      "cell": 2,
+      "train_rows": 335,
+      "later_rows": 339,
+      "poc": "1"
+    },
+    {
+      "id": "30-083-0002",
+      "latitude": 47.8679,
+      "longitude": -104.676944,
+      "cell": 2,
+      "train_rows": 346,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "32-003-0075",
+      "latitude": 36.270592,
+      "longitude": -115.238282,
+      "cell": 0,
+      "train_rows": 358,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "32-003-0540",
+      "latitude": 36.141875,
+      "longitude": -115.078742,
+      "cell": 0,
+      "train_rows": 359,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "32-003-0561",
+      "latitude": 36.163962,
+      "longitude": -115.11393,
+      "cell": 0,
+      "train_rows": 363,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "32-003-1501",
+      "latitude": 36.139707,
+      "longitude": -115.175654,
+      "cell": 0,
+      "train_rows": 361,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "32-003-1502",
+      "latitude": 36.174365,
+      "longitude": -115.13977,
+      "cell": 0,
+      "train_rows": 360,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "32-031-0031",
+      "latitude": 39.521933,
+      "longitude": -119.7954,
+      "cell": 2,
+      "train_rows": 363,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "34-003-0010",
+      "latitude": 40.85355,
+      "longitude": -73.96618,
+      "cell": 3,
+      "train_rows": 363,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "34-007-0002",
+      "latitude": 39.934559,
+      "longitude": -75.125219,
+      "cell": 3,
+      "train_rows": 353,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "34-011-0007",
+      "latitude": 39.422273,
+      "longitude": -75.025204,
+      "cell": 3,
+      "train_rows": 362,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "34-017-0006",
+      "latitude": 40.67025,
+      "longitude": -74.126081,
+      "cell": 3,
+      "train_rows": 364,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "34-023-0011",
+      "latitude": 40.462182,
+      "longitude": -74.429439,
+      "cell": 3,
+      "train_rows": 360,
+      "later_rows": 365,
+      "poc": "2"
+    },
+    {
+      "id": "34-027-3001",
+      "latitude": 40.787628,
+      "longitude": -74.676301,
+      "cell": 3,
+      "train_rows": 363,
+      "later_rows": 355,
+      "poc": "1"
+    },
+    {
+      "id": "34-039-0004",
+      "latitude": 40.64144,
+      "longitude": -74.208365,
+      "cell": 3,
+      "train_rows": 362,
+      "later_rows": 361,
+      "poc": "2"
+    },
+    {
+      "id": "34-041-0007",
+      "latitude": 40.92458,
+      "longitude": -75.067815,
+      "cell": 3,
+      "train_rows": 352,
+      "later_rows": 355,
+      "poc": "1"
+    },
+    {
+      "id": "35-001-0023",
+      "latitude": 35.1343,
+      "longitude": -106.5852,
+      "cell": 0,
+      "train_rows": 346,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "35-001-0029",
+      "latitude": 35.01708,
+      "longitude": -106.65739,
+      "cell": 0,
+      "train_rows": 335,
+      "later_rows": 355,
+      "poc": "1"
+    },
+    {
+      "id": "35-013-0021",
+      "latitude": 31.796218,
+      "longitude": -106.584434,
+      "cell": 0,
+      "train_rows": 351,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "35-013-0022",
+      "latitude": 31.787885,
+      "longitude": -106.683324,
+      "cell": 0,
+      "train_rows": 358,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "35-015-1005",
+      "latitude": 32.380118,
+      "longitude": -104.262726,
+      "cell": 0,
+      "train_rows": 360,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "35-025-0008",
+      "latitude": 32.726656,
+      "longitude": -103.122917,
+      "cell": 0,
+      "train_rows": 318,
+      "later_rows": 324,
+      "poc": "1"
+    },
+    {
+      "id": "35-045-0009",
+      "latitude": 36.742227,
+      "longitude": -107.977567,
+      "cell": 0,
+      "train_rows": 362,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "35-045-0018",
+      "latitude": 36.809735,
+      "longitude": -107.652192,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 347,
+      "poc": "1"
+    },
+    {
+      "id": "35-045-0020",
+      "latitude": 36.035,
+      "longitude": -107.904167,
+      "cell": 0,
+      "train_rows": 360,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "35-045-1005",
+      "latitude": 36.796667,
+      "longitude": -108.473138,
+      "cell": 0,
+      "train_rows": 359,
+      "later_rows": 360,
+      "poc": "2"
+    },
+    {
+      "id": "35-045-1233",
+      "latitude": 36.8071,
+      "longitude": -108.69523,
+      "cell": 0,
+      "train_rows": 326,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "36-005-0110",
+      "latitude": 40.816,
+      "longitude": -73.902,
+      "cell": 3,
+      "train_rows": 337,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "36-005-0133",
+      "latitude": 40.8679,
+      "longitude": -73.87809,
+      "cell": 3,
+      "train_rows": 364,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "36-029-0005",
+      "latitude": 42.876907,
+      "longitude": -78.809526,
+      "cell": 3,
+      "train_rows": 347,
+      "later_rows": 357,
+      "poc": "3"
+    },
+    {
+      "id": "36-029-0023",
+      "latitude": 42.921107,
+      "longitude": -78.765825,
+      "cell": 3,
+      "train_rows": 315,
+      "later_rows": 334,
+      "poc": "1"
+    },
+    {
+      "id": "36-055-0015",
+      "latitude": 43.145013,
+      "longitude": -77.55728,
+      "cell": 3,
+      "train_rows": 355,
+      "later_rows": 328,
+      "poc": "1"
+    },
+    {
+      "id": "36-081-0124",
+      "latitude": 40.73614,
+      "longitude": -73.82153,
+      "cell": 3,
+      "train_rows": 356,
+      "later_rows": 339,
+      "poc": "1"
+    },
+    {
+      "id": "36-081-0125",
+      "latitude": 40.739264,
+      "longitude": -73.817694,
+      "cell": 3,
+      "train_rows": 345,
+      "later_rows": 343,
+      "poc": "1"
+    },
+    {
+      "id": "37-067-0022",
+      "latitude": 36.11094,
+      "longitude": -80.224501,
+      "cell": 1,
+      "train_rows": 357,
+      "later_rows": 345,
+      "poc": "1"
+    },
+    {
+      "id": "37-119-0041",
+      "latitude": 35.2401,
+      "longitude": -80.785683,
+      "cell": 1,
+      "train_rows": 349,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "37-131-0003",
+      "latitude": 36.511708,
+      "longitude": -77.655389,
+      "cell": 1,
+      "train_rows": 333,
+      "later_rows": 337,
+      "poc": "1"
+    },
+    {
+      "id": "37-159-0021",
+      "latitude": 35.551868,
+      "longitude": -80.395039,
+      "cell": 1,
+      "train_rows": 361,
+      "later_rows": 358,
+      "poc": "3"
+    },
+    {
+      "id": "37-183-0021",
+      "latitude": 35.8652,
+      "longitude": -78.8197,
+      "cell": 1,
+      "train_rows": 355,
+      "later_rows": 352,
+      "poc": "1"
+    },
+    {
+      "id": "38-013-0004",
+      "latitude": 48.64193,
+      "longitude": -102.4018,
+      "cell": 2,
+      "train_rows": 338,
+      "later_rows": 335,
+      "poc": "1"
+    },
+    {
+      "id": "38-015-0003",
+      "latitude": 46.825425,
+      "longitude": -100.76821,
+      "cell": 2,
+      "train_rows": 364,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "38-017-1004",
+      "latitude": 46.933754,
+      "longitude": -96.85535,
+      "cell": 3,
+      "train_rows": 347,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "38-025-0004",
+      "latitude": 47.342423,
+      "longitude": -102.645864,
+      "cell": 2,
+      "train_rows": 361,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "38-053-0002",
+      "latitude": 47.5812,
+      "longitude": -103.2995,
+      "cell": 2,
+      "train_rows": 352,
+      "later_rows": 309,
+      "poc": "1"
+    },
+    {
+      "id": "38-057-0004",
+      "latitude": 47.298611,
+      "longitude": -101.766944,
+      "cell": 2,
+      "train_rows": 325,
+      "later_rows": 310,
+      "poc": "1"
+    },
+    {
+      "id": "38-065-0002",
+      "latitude": 47.185833,
+      "longitude": -101.428056,
+      "cell": 2,
+      "train_rows": 365,
+      "later_rows": 345,
+      "poc": "1"
+    },
+    {
+      "id": "38-101-0003",
+      "latitude": 47.940861,
+      "longitude": -101.571583,
+      "cell": 2,
+      "train_rows": 343,
+      "later_rows": 334,
+      "poc": "1"
+    },
+    {
+      "id": "39-013-0006",
+      "latitude": 39.9679,
+      "longitude": -80.7464,
+      "cell": 3,
+      "train_rows": 362,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "39-035-0060",
+      "latitude": 41.492117,
+      "longitude": -81.678449,
+      "cell": 3,
+      "train_rows": 349,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "39-035-0073",
+      "latitude": 41.44013,
+      "longitude": -81.494833,
+      "cell": 3,
+      "train_rows": 361,
+      "later_rows": 322,
+      "poc": "1"
+    },
+    {
+      "id": "39-049-0034",
+      "latitude": 40.002707,
+      "longitude": -82.994424,
+      "cell": 3,
+      "train_rows": 351,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "39-049-0038",
+      "latitude": 40.11107,
+      "longitude": -83.065415,
+      "cell": 3,
+      "train_rows": 364,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "39-061-0040",
+      "latitude": 39.12886,
+      "longitude": -84.50404,
+      "cell": 3,
+      "train_rows": 359,
+      "later_rows": 349,
+      "poc": "2"
+    },
+    {
+      "id": "39-061-0048",
+      "latitude": 39.146025,
+      "longitude": -84.538375,
+      "cell": 3,
+      "train_rows": 357,
+      "later_rows": 337,
+      "poc": "1"
+    },
+    {
+      "id": "40-109-0097",
+      "latitude": 35.50307,
+      "longitude": -97.577981,
+      "cell": 1,
+      "train_rows": 340,
+      "later_rows": 342,
+      "poc": "1"
+    },
+    {
+      "id": "40-109-1037",
+      "latitude": 35.614131,
+      "longitude": -97.475083,
+      "cell": 1,
+      "train_rows": 324,
+      "later_rows": 326,
+      "poc": "1"
+    },
+    {
+      "id": "40-143-1127",
+      "latitude": 36.204902,
+      "longitude": -95.976537,
+      "cell": 1,
+      "train_rows": 349,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "41-051-0080",
+      "latitude": 45.496641,
+      "longitude": -122.602877,
+      "cell": 2,
+      "train_rows": 350,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "41-067-0005",
+      "latitude": 45.3992,
+      "longitude": -122.7455,
+      "cell": 2,
+      "train_rows": 348,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "42-001-0001",
+      "latitude": 39.92002,
+      "longitude": -77.30968,
+      "cell": 3,
+      "train_rows": 307,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "42-003-1008",
+      "latitude": 40.617488,
+      "longitude": -79.727664,
+      "cell": 3,
+      "train_rows": 343,
+      "later_rows": 339,
+      "poc": "1"
+    },
+    {
+      "id": "42-003-1376",
+      "latitude": 40.43743,
+      "longitude": -79.863572,
+      "cell": 3,
+      "train_rows": 356,
+      "later_rows": 330,
+      "poc": "1"
+    },
+    {
+      "id": "42-007-0014",
+      "latitude": 40.747796,
+      "longitude": -80.316442,
+      "cell": 3,
+      "train_rows": 355,
+      "later_rows": 339,
+      "poc": "1"
+    },
+    {
+      "id": "42-021-0011",
+      "latitude": 40.309722,
+      "longitude": -78.915,
+      "cell": 3,
+      "train_rows": 336,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "42-045-0002",
+      "latitude": 39.835556,
+      "longitude": -75.3725,
+      "cell": 3,
+      "train_rows": 346,
+      "later_rows": 302,
+      "poc": "1"
+    },
+    {
+      "id": "42-049-0003",
+      "latitude": 42.14175,
+      "longitude": -80.038611,
+      "cell": 3,
+      "train_rows": 322,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "42-069-2006",
+      "latitude": 41.442778,
+      "longitude": -75.623056,
+      "cell": 3,
+      "train_rows": 345,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "42-095-0025",
+      "latitude": 40.628056,
+      "longitude": -75.341111,
+      "cell": 3,
+      "train_rows": 324,
+      "later_rows": 316,
+      "poc": "1"
+    },
+    {
+      "id": "42-101-0048",
+      "latitude": 39.991389,
+      "longitude": -75.080833,
+      "cell": 3,
+      "train_rows": 356,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "42-101-0075",
+      "latitude": 40.054171,
+      "longitude": -74.985166,
+      "cell": 3,
+      "train_rows": 362,
+      "later_rows": 352,
+      "poc": "1"
+    },
+    {
+      "id": "42-101-0076",
+      "latitude": 39.988842,
+      "longitude": -75.207205,
+      "cell": 3,
+      "train_rows": 355,
+      "later_rows": 352,
+      "poc": "1"
+    },
+    {
+      "id": "42-125-0005",
+      "latitude": 40.146667,
+      "longitude": -79.902222,
+      "cell": 3,
+      "train_rows": 336,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "42-133-0008",
+      "latitude": 39.965278,
+      "longitude": -76.699444,
+      "cell": 3,
+      "train_rows": 336,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "44-007-1010",
+      "latitude": 41.841039,
+      "longitude": -71.36097,
+      "cell": 3,
+      "train_rows": 349,
+      "later_rows": 332,
+      "poc": "1"
+    },
+    {
+      "id": "46-071-0001",
+      "latitude": 43.74561,
+      "longitude": -101.941218,
+      "cell": 2,
+      "train_rows": 338,
+      "later_rows": 364,
+      "poc": "3"
+    },
+    {
+      "id": "47-037-0011",
+      "latitude": 36.205055,
+      "longitude": -86.74472,
+      "cell": 1,
+      "train_rows": 344,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "47-037-0040",
+      "latitude": 36.1424,
+      "longitude": -86.7341,
+      "cell": 1,
+      "train_rows": 363,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "47-157-0100",
+      "latitude": 35.16126,
+      "longitude": -89.87065,
+      "cell": 1,
+      "train_rows": 357,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "48-029-0032",
+      "latitude": 29.515061,
+      "longitude": -98.620211,
+      "cell": 1,
+      "train_rows": 354,
+      "later_rows": 307,
+      "poc": "1"
+    },
+    {
+      "id": "48-029-0052",
+      "latitude": 29.632077,
+      "longitude": -98.564918,
+      "cell": 1,
+      "train_rows": 348,
+      "later_rows": 362,
+      "poc": "2"
+    },
+    {
+      "id": "48-029-0059",
+      "latitude": 29.275371,
+      "longitude": -98.3117,
+      "cell": 1,
+      "train_rows": 358,
+      "later_rows": 354,
+      "poc": "1"
+    },
+    {
+      "id": "48-039-1016",
+      "latitude": 29.043761,
+      "longitude": -95.472953,
+      "cell": 1,
+      "train_rows": 349,
+      "later_rows": 351,
+      "poc": "1"
+    },
+    {
+      "id": "48-113-0069",
+      "latitude": 32.820061,
+      "longitude": -96.860117,
+      "cell": 1,
+      "train_rows": 356,
+      "later_rows": 363,
+      "poc": "4"
+    },
+    {
+      "id": "48-121-0034",
+      "latitude": 33.219074,
+      "longitude": -97.196296,
+      "cell": 1,
+      "train_rows": 356,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "48-141-0055",
+      "latitude": 31.746748,
+      "longitude": -106.402788,
+      "cell": 0,
+      "train_rows": 361,
+      "later_rows": 340,
+      "poc": "1"
+    },
+    {
+      "id": "48-167-1034",
+      "latitude": 29.25447,
+      "longitude": -94.861278,
+      "cell": 1,
+      "train_rows": 341,
+      "later_rows": 309,
+      "poc": "1"
+    },
+    {
+      "id": "48-183-0001",
+      "latitude": 32.378681,
+      "longitude": -94.711803,
+      "cell": 1,
+      "train_rows": 359,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "48-201-0047",
+      "latitude": 29.834167,
+      "longitude": -95.489129,
+      "cell": 1,
+      "train_rows": 332,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "48-201-0055",
+      "latitude": 29.69566,
+      "longitude": -95.49924,
+      "cell": 1,
+      "train_rows": 308,
+      "later_rows": 355,
+      "poc": "1"
+    },
+    {
+      "id": "48-201-0416",
+      "latitude": 29.686289,
+      "longitude": -95.294723,
+      "cell": 1,
+      "train_rows": 360,
+      "later_rows": 347,
+      "poc": "1"
+    },
+    {
+      "id": "48-201-0417",
+      "latitude": 29.772857,
+      "longitude": -95.395937,
+      "cell": 1,
+      "train_rows": 336,
+      "later_rows": 349,
+      "poc": "1"
+    },
+    {
+      "id": "48-201-1034",
+      "latitude": 29.768033,
+      "longitude": -95.220574,
+      "cell": 1,
+      "train_rows": 364,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "48-201-1035",
+      "latitude": 29.733737,
+      "longitude": -95.257605,
+      "cell": 1,
+      "train_rows": 343,
+      "later_rows": 308,
+      "poc": "1"
+    },
+    {
+      "id": "48-201-1039",
+      "latitude": 29.670552,
+      "longitude": -95.129933,
+      "cell": 1,
+      "train_rows": 362,
+      "later_rows": 358,
+      "poc": "4"
+    },
+    {
+      "id": "48-201-1050",
+      "latitude": 29.583068,
+      "longitude": -95.015554,
+      "cell": 1,
+      "train_rows": 333,
+      "later_rows": 355,
+      "poc": "1"
+    },
+    {
+      "id": "48-203-0002",
+      "latitude": 32.669005,
+      "longitude": -94.167468,
+      "cell": 1,
+      "train_rows": 355,
+      "later_rows": 316,
+      "poc": "1"
+    },
+    {
+      "id": "48-231-1006",
+      "latitude": 33.153086,
+      "longitude": -96.115569,
+      "cell": 1,
+      "train_rows": 359,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "48-245-0009",
+      "latitude": 30.036481,
+      "longitude": -94.071074,
+      "cell": 1,
+      "train_rows": 360,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "48-255-1070",
+      "latitude": 28.880444,
+      "longitude": -97.888053,
+      "cell": 1,
+      "train_rows": 364,
+      "later_rows": 349,
+      "poc": "1"
+    },
+    {
+      "id": "48-257-0005",
+      "latitude": 32.564967,
+      "longitude": -96.317683,
+      "cell": 1,
+      "train_rows": 357,
+      "later_rows": 347,
+      "poc": "1"
+    },
+    {
+      "id": "48-339-0078",
+      "latitude": 30.350325,
+      "longitude": -95.425137,
+      "cell": 1,
+      "train_rows": 357,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "48-349-1051",
+      "latitude": 32.031946,
+      "longitude": -96.399147,
+      "cell": 1,
+      "train_rows": 339,
+      "later_rows": 321,
+      "poc": "1"
+    },
+    {
+      "id": "48-361-1001",
+      "latitude": 30.085258,
+      "longitude": -93.761366,
+      "cell": 1,
+      "train_rows": 360,
+      "later_rows": 327,
+      "poc": "1"
+    },
+    {
+      "id": "48-423-0007",
+      "latitude": 32.344019,
+      "longitude": -95.415752,
+      "cell": 1,
+      "train_rows": 356,
+      "later_rows": 348,
+      "poc": "1"
+    },
+    {
+      "id": "48-439-0075",
+      "latitude": 32.987887,
+      "longitude": -97.477154,
+      "cell": 1,
+      "train_rows": 347,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "48-439-1002",
+      "latitude": 32.805816,
+      "longitude": -97.356526,
+      "cell": 1,
+      "train_rows": 353,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "48-439-1053",
+      "latitude": 32.664758,
+      "longitude": -97.337905,
+      "cell": 1,
+      "train_rows": 345,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "48-439-2003",
+      "latitude": 32.922489,
+      "longitude": -97.282096,
+      "cell": 1,
+      "train_rows": 302,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "48-439-3009",
+      "latitude": 32.984258,
+      "longitude": -97.063702,
+      "cell": 1,
+      "train_rows": 360,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "48-439-3011",
+      "latitude": 32.656365,
+      "longitude": -97.088592,
+      "cell": 1,
+      "train_rows": 360,
+      "later_rows": 343,
+      "poc": "1"
+    },
+    {
+      "id": "48-493-1038",
+      "latitude": 29.130677,
+      "longitude": -98.148076,
+      "cell": 1,
+      "train_rows": 363,
+      "later_rows": 300,
+      "poc": "1"
+    },
+    {
+      "id": "49-005-0007",
+      "latitude": 41.842649,
+      "longitude": -111.852199,
+      "cell": 2,
+      "train_rows": 350,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "49-007-1003",
+      "latitude": 39.59575,
+      "longitude": -110.770111,
+      "cell": 2,
+      "train_rows": 364,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "49-011-0004",
+      "latitude": 40.902967,
+      "longitude": -111.884467,
+      "cell": 2,
+      "train_rows": 363,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "49-013-0002",
+      "latitude": 40.294178,
+      "longitude": -110.009732,
+      "cell": 2,
+      "train_rows": 350,
+      "later_rows": 356,
+      "poc": "1"
+    },
+    {
+      "id": "49-013-7011",
+      "latitude": 40.216779,
+      "longitude": -110.182742,
+      "cell": 2,
+      "train_rows": 355,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "49-021-0005",
+      "latitude": 37.74743,
+      "longitude": -113.055525,
+      "cell": 0,
+      "train_rows": 364,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "49-035-2005",
+      "latitude": 40.598056,
+      "longitude": -111.894167,
+      "cell": 2,
+      "train_rows": 358,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "49-035-3006",
+      "latitude": 40.736389,
+      "longitude": -111.872222,
+      "cell": 2,
+      "train_rows": 361,
+      "later_rows": 341,
+      "poc": "1"
+    },
+    {
+      "id": "49-035-3010",
+      "latitude": 40.78422,
+      "longitude": -111.931,
+      "cell": 2,
+      "train_rows": 364,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "49-035-3013",
+      "latitude": 40.496392,
+      "longitude": -112.036298,
+      "cell": 2,
+      "train_rows": 349,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "49-035-3014",
+      "latitude": 40.709762,
+      "longitude": -112.00876,
+      "cell": 2,
+      "train_rows": 364,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "49-035-3015",
+      "latitude": 40.777145,
+      "longitude": -111.945849,
+      "cell": 2,
+      "train_rows": 353,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "49-035-4002",
+      "latitude": 40.662961,
+      "longitude": -111.901851,
+      "cell": 2,
+      "train_rows": 363,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "49-047-1004",
+      "latitude": 40.46471,
+      "longitude": -109.561472,
+      "cell": 2,
+      "train_rows": 361,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "49-047-2002",
+      "latitude": 40.206291,
+      "longitude": -109.353932,
+      "cell": 2,
+      "train_rows": 337,
+      "later_rows": 349,
+      "poc": "1"
+    },
+    {
+      "id": "49-047-2003",
+      "latitude": 40.05671,
+      "longitude": -109.688108,
+      "cell": 2,
+      "train_rows": 339,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "49-047-7022",
+      "latitude": 40.483598,
+      "longitude": -109.906796,
+      "cell": 2,
+      "train_rows": 355,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "49-049-4001",
+      "latitude": 40.341389,
+      "longitude": -111.713611,
+      "cell": 2,
+      "train_rows": 362,
+      "later_rows": 363,
+      "poc": "2"
+    },
+    {
+      "id": "49-049-5010",
+      "latitude": 40.136378,
+      "longitude": -111.657936,
+      "cell": 2,
+      "train_rows": 364,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "49-053-0007",
+      "latitude": 37.179125,
+      "longitude": -113.305096,
+      "cell": 0,
+      "train_rows": 351,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "49-057-1003",
+      "latitude": 41.303614,
+      "longitude": -111.987871,
+      "cell": 2,
+      "train_rows": 353,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "50-021-0002",
+      "latitude": 43.608056,
+      "longitude": -72.982778,
+      "cell": 3,
+      "train_rows": 359,
+      "later_rows": 355,
+      "poc": "1"
+    },
+    {
+      "id": "51-013-0020",
+      "latitude": 38.8577,
+      "longitude": -77.05922,
+      "cell": 1,
+      "train_rows": 362,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "51-036-0002",
+      "latitude": 37.34438,
+      "longitude": -77.25925,
+      "cell": 1,
+      "train_rows": 365,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "51-059-0031",
+      "latitude": 38.76835,
+      "longitude": -77.18347,
+      "cell": 1,
+      "train_rows": 356,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "51-087-0014",
+      "latitude": 37.55652,
+      "longitude": -77.40027,
+      "cell": 1,
+      "train_rows": 355,
+      "later_rows": 314,
+      "poc": "2"
+    },
+    {
+      "id": "51-107-1005",
+      "latitude": 39.02473,
+      "longitude": -77.48925,
+      "cell": 3,
+      "train_rows": 364,
+      "later_rows": 362,
+      "poc": "1"
+    },
+    {
+      "id": "51-143-0005",
+      "latitude": 36.83343,
+      "longitude": -79.337469,
+      "cell": 1,
+      "train_rows": 335,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "51-153-0009",
+      "latitude": 38.85287,
+      "longitude": -77.63462,
+      "cell": 1,
+      "train_rows": 357,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "51-161-1004",
+      "latitude": 37.28342,
+      "longitude": -79.88452,
+      "cell": 1,
+      "train_rows": 357,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "51-165-0003",
+      "latitude": 38.47753,
+      "longitude": -78.81952,
+      "cell": 1,
+      "train_rows": 362,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "51-650-0008",
+      "latitude": 37.103733,
+      "longitude": -76.387017,
+      "cell": 1,
+      "train_rows": 360,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "51-710-0024",
+      "latitude": 36.85555,
+      "longitude": -76.30135,
+      "cell": 1,
+      "train_rows": 355,
+      "later_rows": 357,
+      "poc": "1"
+    },
+    {
+      "id": "51-760-0025",
+      "latitude": 37.59088,
+      "longitude": -77.46925,
+      "cell": 1,
+      "train_rows": 353,
+      "later_rows": 363,
+      "poc": "1"
+    },
+    {
+      "id": "53-033-0030",
+      "latitude": 47.597222,
+      "longitude": -122.319722,
+      "cell": 2,
+      "train_rows": 350,
+      "later_rows": 350,
+      "poc": "1"
+    },
+    {
+      "id": "53-033-0080",
+      "latitude": 47.568236,
+      "longitude": -122.308628,
+      "cell": 2,
+      "train_rows": 361,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "53-053-0024",
+      "latitude": 47.22634,
+      "longitude": -122.46256,
+      "cell": 2,
+      "train_rows": 364,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "55-079-0056",
+      "latitude": 42.93257,
+      "longitude": -87.93434,
+      "cell": 3,
+      "train_rows": 364,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "56-005-0123",
+      "latitude": 44.6522,
+      "longitude": -105.2903,
+      "cell": 2,
+      "train_rows": 336,
+      "later_rows": 353,
+      "poc": "1"
+    },
+    {
+      "id": "56-007-0009",
+      "latitude": 41.79358,
+      "longitude": -107.08422,
+      "cell": 2,
+      "train_rows": 348,
+      "later_rows": 361,
+      "poc": "1"
+    },
+    {
+      "id": "56-009-0010",
+      "latitude": 43.101281,
+      "longitude": -105.498931,
+      "cell": 2,
+      "train_rows": 361,
+      "later_rows": 360,
+      "poc": "1"
+    },
+    {
+      "id": "56-013-0004",
+      "latitude": 43.02421,
+      "longitude": -108.3637,
+      "cell": 2,
+      "train_rows": 358,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "56-013-0099",
+      "latitude": 42.529999,
+      "longitude": -108.720003,
+      "cell": 2,
+      "train_rows": 354,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "56-013-0232",
+      "latitude": 43.081667,
+      "longitude": -107.549444,
+      "cell": 2,
+      "train_rows": 359,
+      "later_rows": 355,
+      "poc": "1"
+    },
+    {
+      "id": "56-019-0004",
+      "latitude": 43.87483,
+      "longitude": -106.50974,
+      "cell": 2,
+      "train_rows": 361,
+      "later_rows": 364,
+      "poc": "1"
+    },
+    {
+      "id": "56-021-0100",
+      "latitude": 41.182227,
+      "longitude": -104.778334,
+      "cell": 2,
+      "train_rows": 354,
+      "later_rows": 358,
+      "poc": "2"
+    },
+    {
+      "id": "56-025-0100",
+      "latitude": 42.82231,
+      "longitude": -106.36501,
+      "cell": 2,
+      "train_rows": 343,
+      "later_rows": 348,
+      "poc": "1"
+    },
+    {
+      "id": "56-025-2601",
+      "latitude": 42.8608,
+      "longitude": -106.23586,
+      "cell": 2,
+      "train_rows": 310,
+      "later_rows": 348,
+      "poc": "1"
+    },
+    {
+      "id": "56-035-0099",
+      "latitude": 42.719,
+      "longitude": -109.753,
+      "cell": 2,
+      "train_rows": 349,
+      "later_rows": 343,
+      "poc": "1"
+    },
+    {
+      "id": "56-035-0100",
+      "latitude": 42.7907,
+      "longitude": -110.0551,
+      "cell": 2,
+      "train_rows": 362,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "56-035-0101",
+      "latitude": 42.869824,
+      "longitude": -109.87076,
+      "cell": 2,
+      "train_rows": 357,
+      "later_rows": 365,
+      "poc": "1"
+    },
+    {
+      "id": "56-035-0700",
+      "latitude": 42.486361,
+      "longitude": -110.098861,
+      "cell": 2,
+      "train_rows": 360,
+      "later_rows": 358,
+      "poc": "1"
+    },
+    {
+      "id": "56-035-1002",
+      "latitude": 42.373499,
+      "longitude": -109.560498,
+      "cell": 2,
+      "train_rows": 358,
+      "later_rows": 359,
+      "poc": "1"
+    },
+    {
+      "id": "56-037-0200",
+      "latitude": 41.677667,
+      "longitude": -108.024835,
+      "cell": 2,
+      "train_rows": 354,
+      "later_rows": 343,
+      "poc": "1"
+    },
+    {
+      "id": "56-037-0300",
+      "latitude": 41.750556,
+      "longitude": -109.788333,
+      "cell": 2,
+      "train_rows": 357,
+      "later_rows": 352,
+      "poc": "1"
+    }
+  ],
+  "exclusions": {
+    "ambiguous": 1,
+    "coordinate_drift": 0,
+    "incomplete": 109,
+    "no_training_poc": 8
+  },
+  "sources": [
+    {
+      "archive": "epa_no2_2021.zip",
+      "url": "https://aqs.epa.gov/aqsweb/airdata/daily_42602_2021.zip",
+      "bytes": 2255169,
+      "sha256": "2885d3a51f57ff789d63ae5247fd8ab1d63e81a65340c6646e0b26d5e8469b82",
+      "members": [
+        {
+          "member": "daily_42602_2021.csv",
+          "bytes": 56401304,
+          "sha256": "809cd8d6e33e4e9745903ec169362c30191ad88ab890494ed40b4613e51f53eb"
+        }
+      ],
+      "licence": "Public domain (EPA AQS)",
+      "acquired_at": "2026-10-27T18:03:46.253830+00:00",
+      "headers": {
+        "Last-Modified": "Mon, 13 Jul 2026 15:47:42 GMT",
+        "ETag": "\"226941-6568002c221a3\""
+      }
+    },
+    {
+      "archive": "epa_no2_2022.zip",
+      "url": "https://aqs.epa.gov/aqsweb/airdata/daily_42602_2022.zip",
+      "bytes": 2263356,
+      "sha256": "b527bc9708474c43f885d0c6155d4fbf8349e42d4228bcc9bf32a9084e627862",
+      "members": [
+        {
+          "member": "daily_42602_2022.csv",
+          "bytes": 56333151,
+          "sha256": "c3f839fbb02ea187cba205f8482114b5f1e47bdc1af39b20994c6c6ce7dac0fa"
+        }
+      ],
+      "licence": "Public domain (EPA AQS)",
+      "acquired_at": "2026-10-27T18:05:08.031781+00:00",
+      "headers": {
+        "Last-Modified": "Mon, 13 Jul 2026 15:47:42 GMT",
+        "ETag": "\"22893c-6568002c2352b\""
+      }
+    }
+  ],
+  "sha256": "d79bad83190d95c5bb4140e93407852cb82aa5b86de3064d6f9e1b00fab1fdc6",
+  "scope": "fixed retrospective entity-transfer cohort on new provider archives, not an independent observation process"
+}

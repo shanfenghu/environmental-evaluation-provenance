@@ -1,0 +1,19 @@
+{
+  "run_name": "fresh-pairing-precision-v1",
+  "workloads": [
+    "air_quality_2021_2022",
+    "hydrology"
+  ],
+  "tasks": [
+    "dispersed",
+    "northern_edge"
+  ],
+  "banks": 12,
+  "folds": 5,
+  "seed": 2026110500,
+  "bootstrap_replicates": 3999,
+  "bootstrap_seed": 2026110581,
+  "reference_config": "configs/assessment-v1.json",
+  "reference_records": "records/reference",
+  "timing_scope": "resident inputs, shared fresh native fit charged to both query plans; alternate plan order; no cold-cache or deployed-system claim"
+}
