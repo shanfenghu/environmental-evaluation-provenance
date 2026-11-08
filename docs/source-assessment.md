@@ -90,10 +90,15 @@ and overall fitted-state effects cancel, but interactions involving geometry,
 row counts and source history remain. No causal attribution or runtime advantage
 is implied.
 
-```python
+From the repository root, run this API example with the source path set explicitly.
+The experiment launchers set that path themselves; no package installation is needed.
+
+```sh
+PYTHONPATH=src .venv/bin/python - <<'PY'
 import numpy as np
 from source_assessment.pairing import averaged_audit
 # Fixed scored-block difficulty plus an own-exclusion increment of two.
 g = np.arange(5)[:, None] + np.zeros((5, 5)) + 2 * np.eye(5)
 assert np.isclose(averaged_audit(g), 2)
+PY
 ```
