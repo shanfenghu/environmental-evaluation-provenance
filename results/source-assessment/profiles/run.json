@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "source_hashes": {
+    "experiments/analyze_source_inclusion.py": "c5e31f3bdfea89df378783294b68c667f312e331c033db5d2dd9fcb34a64648a",
+    "src/source_assessment/queries.py": "3319af301cfe341853a3c4cb4d5f7f23babfad8207942ea5867636f3bbdd515f",
+    "requirements.lock": "b67b46c3eefd2ce5684690bab9d7ca585afc67077516c780f2f1dd6160f09059"
+  },
+  "reference_run_sha256": "89d046c475d843b0ea44324dcbeb7ec994bdf9dc7265c01b3c263fe0062d2cd2",
+  "columns": [
+    "ridge",
+    "boosting",
+    "seasonal",
+    "ridge_minus_seasonal",
+    "boosting_minus_seasonal",
+    "boosting_minus_ridge"
+  ],
+  "primary_coordinate": "boosting_minus_ridge",
+  "scope": "Exploratory source-level summaries on inspected fixed banks; no fresh assignment, fit, environmental confirmation or causal/coverage guarantee",
+  "cases": [
+    {
+      "record": "case-0.json",
+      "sha256": "0429488ec679bf9d7506b683dc30643ce6afc0e12733c77b3d4cfa3cb877eaad",
+      "workload": "air_quality_2021_2022",
+      "task": "dispersed"
+    },
+    {
+      "record": "case-1.json",
+      "sha256": "2a00c606819792047ee4d08847ef1e4fb76b6d17f2e098a0767341b628b0f28c",
+      "workload": "air_quality_2021_2022",
+      "task": "northern_edge"
+    },
+    {
+      "record": "case-2.json",
+      "sha256": "ccbdc9f5b674cfa0184d0b48b938fb9499e75dea584603600722ec4a08d3277a",
+      "workload": "hydrology",
+      "task": "dispersed"
+    },
+    {
+      "record": "case-3.json",
+      "sha256": "74564c6d7da0d70b47fe3db012d6fab0fcf1ba420fac648538fcd01e8bfe15ef",
+      "workload": "hydrology",
+      "task": "northern_edge"
+    }
+  ],
+  "maximum_bank_reconstruction_discrepancy": 2.2620794126737565e-15
+}

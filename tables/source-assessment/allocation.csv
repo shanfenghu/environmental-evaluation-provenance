@@ -1,0 +1,5 @@
+workload,task,coupling,refit,cohort,gap
+air_quality_2021_2022,dispersed,+0.8964,+0.1720,-0.9896,+0.0789
+air_quality_2021_2022,northern_edge,+1.0180,+0.2316,-1.8510,-0.6014
+hydrology,dispersed,+0.0505,+0.0091,-0.0855,-0.0259
+hydrology,northern_edge,+0.0506,+0.0053,-0.0946,-0.0388

@@ -1,0 +1,7 @@
+comparison,scored_records,fitted_site_count,target,attribution
+Equal folds,Change,Fixed,Held-out error,"Bates, Hastie and Tibshirani (2024); https://doi.org/10.1080/01621459.2023.2197686"
+Full/reduced fit,Fixed,Changes,Refit contrast,"Bates, Hastie and Tibshirani (2024); https://doi.org/10.1080/01621459.2023.2197686"
+Crossed paths,Change,Changes,Fitting/cohort interaction,
+Fixed model,Change,Fixed,Shift allocation,"Cai, Namkoong and Yadlowsky (2026); https://doi.org/10.1287/opre.2023.0217"
+Configured inclusion,Fixed,Fixed,Mean swap contrast,Wang and Jia (2023); https://proceedings.mlr.press/v206/wang23e.html
+Matched source exclusion,Fixed,Fixed,Mean swap contrast,

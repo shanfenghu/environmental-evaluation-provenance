@@ -1,0 +1,76 @@
+{
+  "kind": "constructed illustration, not environmental evidence",
+  "groups": {
+    "V": [
+      0,
+      1
+    ],
+    "W": [
+      2,
+      3
+    ],
+    "Rest": [
+      4,
+      5
+    ]
+  },
+  "training_sites": [
+    6,
+    4,
+    4
+  ],
+  "loss_unit": "arbitrary mean absolute error units",
+  "fitting_rule": "Arithmetic mean of earlier responses on retained sites",
+  "earlier_group_means_V_W_Rest": [
+    [
+      "7/5",
+      "3",
+      "1"
+    ],
+    [
+      "7/5",
+      "3/5",
+      "17/5"
+    ]
+  ],
+  "fitted_predictions": [
+    [
+      "9/5",
+      "9/5"
+    ],
+    [
+      "2",
+      "2"
+    ],
+    [
+      "6/5",
+      "12/5"
+    ]
+  ],
+  "later_response": 1,
+  "two_site_exclusions_checked": 15,
+  "scored_mean_absolute_errors": [
+    [
+      "4/5",
+      "4/5"
+    ],
+    [
+      "1",
+      "1"
+    ],
+    [
+      "1/5",
+      "7/5"
+    ]
+  ],
+  "full_to_excluded_difference": [
+    "1/5",
+    "1/5"
+  ],
+  "source_swap_contrasts": [
+    "4/5",
+    "-2/5"
+  ],
+  "assertions_passed": true,
+  "claim": "Matching the full-fit and own-held-out scores does not determine the added other-excluded score or even the swap sign."
+}

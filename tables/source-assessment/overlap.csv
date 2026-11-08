@@ -1,0 +1,5 @@
+workload,task,source_edge,conditional,target_edge
+air_quality_2021_2022,dispersed,+0.0063,-1.0164,+0.0204
+air_quality_2021_2022,northern_edge,No observed latitude overlap,No observed latitude overlap,No observed latitude overlap
+hydrology,dispersed,-0.0064,-0.0513,-0.0278
+hydrology,northern_edge,No observed latitude overlap,No observed latitude overlap,No observed latitude overlap

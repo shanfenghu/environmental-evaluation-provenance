@@ -1,0 +1,5 @@
+workload,task,positive_percent,median,quantile10,quantile90,top10percent_trimmed_mean
+air_quality_2021_2022,dispersed,95.2,0.636,0.058,2.912,0.758
+air_quality_2021_2022,northern_edge,94.8,0.699,0.055,3.130,0.844
+hydrology,dispersed,96.4,0.0262,0.0039,0.1225,0.0312
+hydrology,northern_edge,95.6,0.0235,0.0039,0.1330,0.0296

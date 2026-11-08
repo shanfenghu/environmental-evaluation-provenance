@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "reference_run_sha256": "89d046c475d843b0ea44324dcbeb7ec994bdf9dc7265c01b3c263fe0062d2cd2",
+  "executor_sha256": "7226f0f05dfac0df3fa5ba681ea27907e105aa842ed68578a59a96618eaeda4b",
+  "scope": "Exploratory reanalysis of inspected source losses; no new assignments/fits/timings/environmental observations",
+  "columns": [
+    "ridge",
+    "trees",
+    "seasonal",
+    "ridge_minus_seasonal",
+    "trees_minus_seasonal",
+    "trees_minus_ridge"
+  ],
+  "primary_coordinate": 5,
+  "bootstrap_replicates": 3999,
+  "bootstrap_seed": 2026110593,
+  "tie_tolerance": 1e-12,
+  "cases": [
+    {
+      "record": "case-0.json",
+      "sha256": "881b10a4f8cb34b7b707d4091d0e24689d07fea2dae6beac13970bc5e58510d8",
+      "workload": "air_quality_2021_2022",
+      "task": "dispersed"
+    },
+    {
+      "record": "case-1.json",
+      "sha256": "d126ef3a8aaeebc76a42c674480f9545fec7198116b88faa68b521077ae2313b",
+      "workload": "air_quality_2021_2022",
+      "task": "northern_edge"
+    },
+    {
+      "record": "case-2.json",
+      "sha256": "3ba5e80f61798fcce0e85a2fa508e1cfe54e805ee747b54ed38607eca6d099cf",
+      "workload": "hydrology",
+      "task": "dispersed"
+    },
+    {
+      "record": "case-3.json",
+      "sha256": "2afeee4560a20d5743c7d7708c8218fe41b3d411a458075520bd7f0413631591",
+      "workload": "hydrology",
+      "task": "northern_edge"
+    }
+  ],
+  "maximum_reconstruction_error": 2.2620794126737565e-15,
+  "analysis_seconds": 0.14670329203363508
+}

@@ -1,0 +1,5 @@
+workload,task,ridge,trees,seasonal
+air_quality_2021_2022,dispersed,5.323,4.644,4.752
+air_quality_2021_2022,northern_edge,4.106,4.011,4.132
+hydrology,dispersed,1.027,0.854,1.519
+hydrology,northern_edge,1.034,0.871,1.545

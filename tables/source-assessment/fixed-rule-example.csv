@@ -1,0 +1,5 @@
+quantity,held_out_source_1,held_out_source_2,held_out_source_3,held_out_source_4
+Entity-held-out score h,2,3,4,5
+Temporal reference a,2,2,2,2
+Membership contrast C,0,1,2,3
+Matched-source contrast S,2,2,2,2

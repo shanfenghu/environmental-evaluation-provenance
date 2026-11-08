@@ -1,0 +1,7 @@
+step,operation_and_retained_output
+1,"Fix inputs, recipe, D, B, K, U_c, q_c, weights and seed."
+2,Permute each cell; construct disjoint V_1 through V_k.
+3,Fit on earlier D excluding V_j; evaluate required later cohorts while the model is resident.
+4,Retain source identities and loss vectors; query own and other-fold scores with their roles.
+5,Form joint learner contrasts and equal-cell S; optionally average scores from all other fits.
+6,Average within the cycle; independently refresh cycles for conditional uncertainty.

@@ -1,0 +1,5 @@
+workload,task,variance_removed_percent,fit_query_time_ratio,efficiency,descriptive_low,descriptive_high,unrounded_high_below_parity
+air_quality_2021_2022,dispersed,1.9,1.17,0.87,0.87,0.93,True
+air_quality_2021_2022,northern_edge,3.0,1.18,0.87,0.86,0.92,True
+hydrology,dispersed,10.6,1.14,0.98,0.93,2.00,False
+hydrology,northern_edge,6.5,1.15,0.93,0.91,1.04,False

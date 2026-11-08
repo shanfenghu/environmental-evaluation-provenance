@@ -1,0 +1,9 @@
+quantity,EPA,CAMELS-GB
+Retained sources,353,618
+External sources,69,122
+Development sources,284,496
+Eligible sources,276,488
+Scored validation sources,54,96
+Fitted sources per fold,230,400
+Predictor dimensions,13,20
+Original cycles per task,8,8

@@ -1,0 +1,12 @@
+symbol,meaning_and_domain
+"D, B",Disjoint finite development and external source sets
+"K, U_c",Protected sources and eligible cell c
+"n_c, q_c",Cell size and excluded count; positive integers
+"V_c, W_c",Disjoint q_c-subsets of U_c
+"f[-V], f[-W]",Fits on earlier D excluding V and D excluding W
+ell_i(V),Real-valued later loss or joint learner-loss contrast
+Delta_i,Real-valued conditional source-exclusion contrast under the declared assignment law
+s_Jc(f),Mean loss over nonempty source set J_c
+"S(V,W)",Real-valued equal-cell matched exclusion contrast
+G_ij,Joint real loss vector: scored block i and excluded block j
+"E, Cov",Assignment-law expectation and covariance

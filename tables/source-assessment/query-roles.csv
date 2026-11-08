@@ -1,0 +1,4 @@
+fitting_sources,later_V,later_U,later_B
+D,s_V(f_D): temporal reference,s_U(f_D): temporal reference,s_B(f_D): external
+D excluding V,s_V(f[-V]): entity-held-out,s_U(f[-V]): temporal reference,s_B(f[-V]): external
+D excluding W,s_V(f[-W]): temporal reference,Not required,Not required

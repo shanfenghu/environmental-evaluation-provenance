@@ -71,3 +71,9 @@ Dataset description: https://doi.org/10.5194/essd-12-2459-2020
 Provider inputs and locally derived arrays remain outside the repository. Local
 retention and content checks do not independently certify upstream measurement
 ancestry or a second off-device recovery copy.
+
+The selected figure PDFs embed DejaVu fonts. Their copyright and licence notices
+are retained in `docs/embedded-font-license.txt`; the project MIT licence does
+not replace those terms. The selected figures, readable tables and numerical
+summaries are authored scientific outputs derived from the credited inputs,
+not copies of provider observation datasets.
