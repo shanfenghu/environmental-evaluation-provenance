@@ -19,9 +19,10 @@ path explicitly: `uv venv --python /path/to/python3.12 .venv`. The executable mu
 report Python 3.12.14; a managed interpreter download is not required.
 
 The launcher imports only this directory's `src/`; installation is unnecessary.
-The lock pins all numerical and plotting dependencies. No software licence is
-currently granted. Third-party data and dependencies retain their own terms;
-see [the attribution](THIRD_PARTY_NOTICES.md).
+The lock pins all numerical and plotting dependencies. Original authored software,
+tests, configuration and documentation use the [MIT licence](LICENSE). Provider
+data, prepared metadata, derived records, dependencies and embedded fonts retain
+their separately applicable terms; see [the attribution](THIRD_PARTY_NOTICES.md).
 
 Small reference records and source-indexed losses are included. Prepared arrays
 and provider archives are separate inputs, excluded from Git. Without prepared
