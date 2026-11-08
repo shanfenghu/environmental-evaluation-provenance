@@ -204,6 +204,17 @@ def compare(reference,replay,output,atol=1e-10):
     actual=json.loads((replay/'run.json').read_text())
     assert actual['complete'] and expected['complete']
     assert actual['configuration_sha256']==expected['configuration_sha256']
+    expected_refs={item['record']:item for item in expected['cases']}
+    actual_refs={item['record']:item for item in actual['cases']}
+    if (not expected_refs or set(actual_refs)!=set(expected_refs)
+            or len(expected_refs)!=len(expected['cases'])
+            or len(actual_refs)!=len(actual['cases'])):
+        raise ValueError('Replay must cover every distinct reference case')
+    if actual['stage'] not in ['full', 'full_only', 'fixed_cycle']:
+        raise ValueError('Unknown native replay stage')
+    for directory, manifest in [(reference,expected),(replay,actual)]:
+        if sha(directory/'losses.zip')!=manifest['loss_archive_sha256']:
+            raise ValueError('Replay/reference loss archive hash differs')
     maximum=0.;states=0;cycles=0
     def compare_value(a,b,path):
         nonlocal maximum
@@ -216,25 +227,46 @@ def compare(reference,replay,output,atol=1e-10):
             assert len(a)==len(b),path
             for i,(x,y) in enumerate(zip(a,b)):compare_value(x,y,path+'/'+str(i))
         elif isinstance(a,(float,int)) and not isinstance(a,bool):
+            if not np.isfinite(a) or not np.isfinite(b):
+                raise ValueError('Nonfinite scientific value: '+path)
             error=abs(a-b);maximum=max(maximum,error)
             if error>atol:raise AssertionError(f'{path}: numerical discrepancy {error}')
         else:assert a==b,path
     with np.load(reference/'losses.zip',allow_pickle=False) as old, np.load(replay/'losses.zip',allow_pickle=False) as new:
+        for archive, manifest in [(old,expected),(new,actual)]:
+            if (not archive.files or len(set(archive.files))!=len(archive.files)
+                    or sorted(archive.files)!=manifest['loss_archive_keys']):
+                raise ValueError('Loss archive members differ from the declared states')
+        claimed_keys=[]
+        for name in actual_refs:
+            for directory, ref in [(reference,expected_refs[name]),(replay,actual_refs[name])]:
+                if sha(directory/name)!=ref['sha256']:
+                    raise ValueError('Case record hash differs: '+name)
+            a=json.loads((reference/name).read_text());b=json.loads((replay/name).read_text())
+            reference_ids=[c['cycle'] for c in a['cycles']]
+            wanted=([] if actual['stage']=='full_only' else
+                    reference_ids[:1] if actual['stage']=='fixed_cycle' else reference_ids)
+            ids=[c['cycle'] for c in b['cycles']]
+            if ids!=wanted or ids!=actual['cycle_indices']:
+                raise ValueError('Replay cycles do not match its declared stage')
+            claimed_keys.append(b['full_loss_key'])
+            claimed_keys.extend(fold['loss_key'] for cycle in b['cycles'] for fold in cycle['folds'])
+            a['cycles']=[c for c in a['cycles'] if c['cycle'] in ids]
+            cycles+=len(ids)
+            compare_value(a,b,name)
+        # Check physical members against case coverage, not only a completion flag.
+        if len(claimed_keys)!=len(set(claimed_keys)) or set(claimed_keys)!=set(new.files):
+            raise ValueError('Replay losses do not cover exactly its recorded fitted states')
         for key in new.files:
             np.testing.assert_allclose(new[key],old[key],rtol=0,atol=atol)
             maximum=max(maximum,float(np.max(abs(new[key]-old[key]))));states+=1
-        for item in actual['cases']:
-            a=json.loads((reference/item['record']).read_text());b=json.loads((replay/item['record']).read_text())
-            ids={c['cycle'] for c in b['cycles']}
-            a['cycles']=[c for c in a['cycles'] if c['cycle'] in ids]
-            cycles+=len(ids)
-            compare_value(a,b,item['record'])
+        full_replayed=set(new.files)==set(old.files)
     result={'complete':True,'stage':actual['stage'],'cases':len(actual['cases']),
             'whole_cycles_replayed':cycles,'native_source_states_replayed':states,
             'candidate_fits_replayed':2*states,'seasonal_fits_replayed':states,
             'reference_source_states':len(expected['loss_archive_keys']),
             'absolute_tolerance':atol,'maximum_absolute_numeric_difference':maximum,
             'excluded_from_comparison':['elapsed timing diagnostics','neutralised metadata byte fingerprints'],
-            'full_native_run_replayed':set(actual['loss_archive_keys'])==set(expected['loss_archive_keys'])}
+            'full_native_run_replayed':full_replayed}
     save(output,result)
     return result
