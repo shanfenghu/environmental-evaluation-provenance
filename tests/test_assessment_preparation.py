@@ -1,11 +1,14 @@
 """Archive repacking must not change which verified scientific members are read."""
 import hashlib
+import io
+from unittest.mock import patch
+from urllib.error import URLError
 from pathlib import Path
 import tempfile
 import unittest
 import zipfile
 import numpy as np
-from source_assessment.prepare import prepare_air, prepare_hydrology, verify_raw
+from source_assessment.prepare import prepare_air, prepare_hydrology, verify_raw, acquire
 
 
 class PreparationTests(unittest.TestCase):
@@ -51,5 +54,43 @@ class PreparationTests(unittest.TestCase):
             arrays,meta=prepare_hydrology(root,cfg,{'camels_gb_2020.zip':[topo,series]})
             self.assertEqual([m['id']for m in meta],['1'])
             np.testing.assert_array_equal(arrays['y0'],[2.]);np.testing.assert_array_equal(arrays['w0'],[2.])
+
+    def test_existing_partial_download_survives_without_a_network_request(self):
+        with tempfile.TemporaryDirectory()as directory:
+            root=Path(directory);partial=root/'input.zip.download'
+            partial.write_bytes(b'retained partial input')
+            manifest={'inputs':[{'file':'input.zip','url':'https://example.invalid/input.zip'}]}
+            with patch('source_assessment.prepare.urllib.request.urlopen')as request:
+                with self.assertRaises(FileExistsError):acquire(root,manifest)
+                request.assert_not_called()
+            self.assertEqual(partial.read_bytes(),b'retained partial input')
+            self.assertFalse((root/'input.zip').exists())
+
+    def test_network_failure_cleans_only_the_new_temporary_file(self):
+        with tempfile.TemporaryDirectory()as directory:
+            root=Path(directory)
+            manifest={'inputs':[{'file':'input.zip','url':'https://example.invalid/input.zip'}]}
+            with patch('source_assessment.prepare.urllib.request.urlopen',side_effect=URLError('fixture failure')):
+                with self.assertRaises(URLError):acquire(root,manifest)
+            self.assertFalse((root/'input.zip.download').exists())
+            self.assertFalse((root/'input.zip').exists())
+
+    def test_acquired_bytes_are_verified_and_never_redownloaded(self):
+        stream=io.BytesIO();value=b'1,2\n'
+        with zipfile.ZipFile(stream,'w')as archive:archive.writestr('values.csv',value)
+        raw=stream.getvalue()
+        manifest={'inputs':[{'file':'input.zip','url':'https://example.invalid/input.zip',
+            'sha256':hashlib.sha256(raw).hexdigest(),'members':[{'member':'values.csv',
+            'bytes':len(value),'sha256':hashlib.sha256(value).hexdigest()}]}]}
+        with tempfile.TemporaryDirectory()as directory:
+            root=Path(directory)
+            with patch('source_assessment.prepare.urllib.request.urlopen',return_value=io.BytesIO(b'wrong response')):
+                with self.assertRaises(ValueError):acquire(root,manifest)
+            self.assertFalse((root/'input.zip.download').exists())
+            with patch('source_assessment.prepare.urllib.request.urlopen',return_value=io.BytesIO(raw))as request:
+                self.assertTrue(acquire(root,manifest)[0]['exact_container'])
+                self.assertTrue(acquire(root,manifest)[0]['exact_container'])
+                request.assert_called_once()
+            self.assertEqual((root/'input.zip').read_bytes(),raw)
 
 if __name__=='__main__':unittest.main()

@@ -46,22 +46,27 @@ def acquire(directory, manifest, allow_container_repack=False):
     """Download absent declared archives, retaining and verifying their actual bytes.
 
     Network availability is not guaranteed. Existing files are checked, never
-    replaced. A temporary download is removed on failure, not installed silently.
+    replaced. Only a temporary file created by this call is removed on failure;
+    an existing partial download is preserved for explicit recovery.
     """
     directory=Path(directory);directory.mkdir(parents=True,exist_ok=True)
     for item in manifest['inputs']:
         dest=contained(directory,item['file'])
         if dest.exists():continue
         temporary=dest.with_suffix(dest.suffix+'.download')
+        created=False
         try:
-            with urllib.request.urlopen(item['url'],timeout=120) as response, temporary.open('xb') as target:
-                while chunk:=response.read(1024*1024):target.write(chunk)
+            # Claim our temporary path before requesting bytes or cleaning up failures.
+            with temporary.open('xb') as target:
+                created=True
+                with urllib.request.urlopen(item['url'],timeout=120) as response:
+                    while chunk:=response.read(1024*1024):target.write(chunk)
             # Validate all used members before making the download visible.
             one={'inputs':[{**item,'file':temporary.name}]}
             verify_raw(directory,one,allow_container_repack)
             temporary.rename(dest)
         except BaseException:
-            temporary.unlink(missing_ok=True)
+            if created:temporary.unlink(missing_ok=True)
             raise
     return verify_raw(directory,manifest,allow_container_repack)
 
