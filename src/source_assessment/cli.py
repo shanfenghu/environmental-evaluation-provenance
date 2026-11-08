@@ -23,7 +23,10 @@ def main(argv=None):
         if name=='render':
             p.add_argument('--pairing')
             p.add_argument('--profiles')
-        if name=='compare':p.add_argument('--replay',required=True)
+        if name=='compare':
+            p.add_argument('--replay',required=True)
+            p.add_argument('--scientific',action='store_true',help='Compare scientific results while allowing regenerated input-container fingerprints')
+            p.add_argument('--atol',type=float,default=1e-10,help='Absolute numerical comparison tolerance')
         if name in ['fit','summarize','verify','render','compare','prepare']:p.add_argument('--output',required=True)
         if name in ['prepare','acquire']:
             p.add_argument('--raw',required=True)
@@ -51,7 +54,7 @@ def main(argv=None):
             render_tables(args.records,Path(args.output)/'tables',args.pairing,args.profiles)
     elif args.command=='compare':
         from .verify import compare
-        print(json.dumps(compare(args.records,args.replay,args.output)))
+        print(json.dumps(compare(args.records,args.replay,args.output,args.atol,args.scientific)))
     elif args.command=='prepare':
         from .prepare import prepare
         prepare(args.raw,args.preparation,args.acquisition,args.output,args.allow_container_repack)

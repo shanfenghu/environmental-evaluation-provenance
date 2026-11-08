@@ -192,13 +192,18 @@ def verify(directory,data_dir,config_path,output):
     return result
 
 
-def compare(reference,replay,output,atol=1e-10):
+def compare(reference,replay,output,atol=1e-10,scientific=False):
     """Compare every replayed state's losses and non-timing scientific records.
 
     A reduced replay compares only its explicitly recorded original cycles.
     It does not imply that omitted cycles were refitted or bootstrap coverage
     was validated. Metadata-byte fingerprints differ after neutralisation.
+    Scientific mode also permits regenerated input containers and their query
+    digests to differ; source memberships, recipes and every numerical result
+    still have to match. It does not certify identical input bytes.
     """
+    if not np.isfinite(atol) or atol < 0:
+        raise ValueError('Comparison tolerance must be finite and nonnegative')
     reference,replay=Path(reference),Path(replay)
     expected=json.loads((reference/'run.json').read_text())
     actual=json.loads((replay/'run.json').read_text())
@@ -215,13 +220,16 @@ def compare(reference,replay,output,atol=1e-10):
     for directory, manifest in [(reference,expected),(replay,actual)]:
         if sha(directory/'losses.zip')!=manifest['loss_archive_sha256']:
             raise ValueError('Replay/reference loss archive hash differs')
-    maximum=0.;states=0;cycles=0
+    maximum=0.;states=0;cycles=0;input_versions=[]
+    excluded={'metadata_sha256','elapsed_seconds_diagnostic_only','fit_seconds','score_seconds'}
+    if scientific:
+        excluded.update({'input_sha256','full_query_signatures','query_signatures'})
     def compare_value(a,b,path):
         nonlocal maximum
         if isinstance(a,dict):
             assert set(a)==set(b),path
             for k in a:
-                if k in ['metadata_sha256','elapsed_seconds_diagnostic_only','fit_seconds','score_seconds']:continue
+                if k in excluded:continue
                 compare_value(a[k],b[k],path+'/'+str(k))
         elif isinstance(a,list):
             assert len(a)==len(b),path
@@ -243,6 +251,9 @@ def compare(reference,replay,output,atol=1e-10):
                 if sha(directory/name)!=ref['sha256']:
                     raise ValueError('Case record hash differs: '+name)
             a=json.loads((reference/name).read_text());b=json.loads((replay/name).read_text())
+            input_versions.append({'case':name,'reference':a.get('input_sha256'),
+                                   'replay':b.get('input_sha256'),
+                                   'same_bytes':a.get('input_sha256')==b.get('input_sha256')})
             reference_ids=[c['cycle'] for c in a['cycles']]
             wanted=([] if actual['stage']=='full_only' else
                     reference_ids[:1] if actual['stage']=='fixed_cycle' else reference_ids)
@@ -266,7 +277,9 @@ def compare(reference,replay,output,atol=1e-10):
             'candidate_fits_replayed':2*states,'seasonal_fits_replayed':states,
             'reference_source_states':len(expected['loss_archive_keys']),
             'absolute_tolerance':atol,'maximum_absolute_numeric_difference':maximum,
-            'excluded_from_comparison':['elapsed timing diagnostics','neutralised metadata byte fingerprints'],
+            'comparison_mode':'scientific' if scientific else 'exact_input_version',
+            'input_versions':input_versions,
+            'excluded_from_comparison':sorted(excluded),
             'full_native_run_replayed':full_replayed}
     save(output,result)
     return result

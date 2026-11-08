@@ -45,6 +45,29 @@ class ReplayTests(unittest.TestCase):
                 self.mutate(root/'replay/run.json',lambda x:x.update(loss_archive_sha256=sha(root/'replay/losses.zip')))
                 with self.assertRaises(ValueError):compare(root/'reference',root/'replay',root/'out.json')
 
+    def test_scientific_mode_allows_only_version_digests_and_declared_tolerance(self):
+        for problem in ['none','scientific_value','membership','tolerance']:
+            with self.subTest(problem=problem), tempfile.TemporaryDirectory()as directory:
+                root=Path(directory);self.fixture(root,'full_only')
+                for name in ['reference','replay']:
+                    case=root/name/'case.json'
+                    self.mutate(case,lambda x:x.update(input_sha256=name,
+                        full_query_signatures={'F':name},development=[0,1]))
+                    if name=='replay':
+                        self.mutate(case,lambda x:x.update(value=1.+(1e-5 if problem=='scientific_value'else 1e-9),
+                            development=[0,2]if problem=='membership'else[0,1]))
+                    self.mutate(root/name/'run.json',lambda x:x['cases'][0].update(sha256=sha(case)))
+                with self.assertRaises(AssertionError):
+                    compare(root/'reference',root/'replay',root/'exact.json')
+                if problem=='none':
+                    result=compare(root/'reference',root/'replay',root/'out.json',atol=1e-8,scientific=True)
+                    self.assertFalse(result['input_versions'][0]['same_bytes'])
+                    self.assertEqual(result['comparison_mode'],'scientific')
+                else:
+                    with self.assertRaises((AssertionError,ValueError)):
+                        compare(root/'reference',root/'replay',root/'out.json',
+                                atol=float('nan')if problem=='tolerance'else 1e-8,scientific=True)
+
     def test_missing_cases_cycles_or_nonfinite_values_are_rejected(self):
         for problem in ['cases','cycles','nonfinite']:
             with self.subTest(problem=problem), tempfile.TemporaryDirectory()as directory:
