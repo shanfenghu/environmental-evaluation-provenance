@@ -24,6 +24,13 @@ tests, configuration and documentation use the [MIT licence](LICENSE). Provider
 data, prepared metadata, derived records, dependencies and embedded fonts retain
 their separately applicable terms; see [the attribution](THIRD_PARTY_NOTICES.md).
 
+The actual selected [figure PDFs](figures/source-assessment/),
+[readable CSV tables](tables/source-assessment/) and
+[key numerical results](results/source-assessment/) are included. The
+[selected-output guide](results/source-assessment/README.md) explains each file,
+its interpretation and its generation route. These scientific outputs remain
+available alongside the code and derived outcome records.
+
 Small reference records and source-indexed losses are included. Prepared arrays
 and provider archives are separate inputs, excluded from Git. Without prepared
 arrays you can still reproduce every recorded aggregate, follow-up and display:
