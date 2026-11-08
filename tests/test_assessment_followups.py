@@ -2,6 +2,9 @@
 from pathlib import Path
 import sys
 import unittest
+import tempfile
+import json
+import csv
 from types import SimpleNamespace
 import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'experiments'))
@@ -10,6 +13,7 @@ from analyze_assessment_rankings import configured_inclusion, score_roles, direc
 from run_pairing_precision import score_blocks
 from analyze_pairing_precision import measurements
 from source_assessment.illustration import illustration
+from source_assessment.tables import render_tables
 
 
 class FollowupTests(unittest.TestCase):
@@ -64,6 +68,18 @@ class FollowupTests(unittest.TestCase):
         np.testing.assert_array_equal(all_scores[1],[5.,4.,5.])
         np.testing.assert_array_equal(one_score[0],all_scores[0])
         for i in one_losses: np.testing.assert_array_equal(one_losses[i],all_losses[i])
+
+    def test_allocation_headers_follow_the_coupling_refit_cohort_path(self):
+        with tempfile.TemporaryDirectory()as directory:
+            root=Path(directory)
+            item={'workload':'fixture','task':'dispersed','target':[4.,5.,6.],
+                  'joint':{'mean':[[0.]*5+[v] for v in [1.,2.,3.,6.]]},
+                  'field_slices':{'gap':[3,4]},'disde':{'components':[[0.]*6]*3}}
+            (root/'summary.json').write_text(json.dumps({'cases':[item]}))
+            render_tables(root,root/'tables')
+            rows=list(csv.reader((root/'tables/allocation.csv').open()))
+            self.assertEqual(rows[0],['workload','task','coupling','refit','cohort','gap'])
+            self.assertEqual(rows[1][2:],['+1.0000','+2.0000','+3.0000','+6.0000'])
 
     def test_constructed_histories_have_opposite_matched_contrasts(self):
         _,states,_,ordinary,swaps,_,_=illustration()

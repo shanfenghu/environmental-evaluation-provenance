@@ -33,7 +33,7 @@ def render_tables(results, output, pairing=None, profiles=None):
         else:
             overlap.append(label+['No observed latitude overlap']*3)
     write_csv(output/'external.csv', ['workload','task','ridge','trees','seasonal'], external)
-    write_csv(output/'allocation.csv', ['workload','task','coupling','composition','training','gap'], allocation)
+    write_csv(output/'allocation.csv', ['workload','task','coupling','refit','cohort','gap'], allocation)
     write_csv(output/'overlap.csv', ['workload','task','source_edge','conditional','target_edge'], overlap)
     if pairing is not None:
         analysis=json.loads(Path(pairing).read_text()); rows=[]
