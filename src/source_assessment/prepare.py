@@ -77,12 +77,15 @@ def features(date,lat,lon,hydro=None):
     return np.column_stack(cols).astype('float32')
 
 
-def prepare_air(directory,config):
-    """Select one training-completeness POC and fixed-coordinate daily site records."""
+def prepare_air(directory,config,members):
+    """Read declared scientific members; select a fixed-coordinate site/POC series."""
     frames=[]
     for name in config['archives']:
         with zipfile.ZipFile(contained(directory,name)) as archive:
-            frames.append(pd.read_csv(archive.open(archive.namelist()[0]),
+            names=members[name]
+            if len(names)!=1:
+                raise ValueError('Each air-quality archive must declare one scientific CSV')
+            frames.append(pd.read_csv(archive.open(names[0]),
                 dtype={'State Code':str,'County Code':str,'Site Num':str,'POC':str}))
     data=pd.concat(frames)
     data=data[data.Latitude.between(*config['latitude_bounds']) &
@@ -108,12 +111,13 @@ def prepare_air(directory,config):
     return arrays,meta
 
 
-def prepare_hydrology(directory,config):
+def prepare_hydrology(directory,config,members):
     """Stream original catchments, preserving the original transformations/order."""
     arrays={};meta=[]
     with zipfile.ZipFile(contained(directory,'camels_gb_2020.zip')) as archive:
         topo=pd.read_csv(archive.open('data/CAMELS_GB_topographic_attributes.csv'),dtype={'gauge_id':str}).set_index('gauge_id')
-        names=[n for n in archive.namelist() if '/timeseries/' in n and n.endswith('.csv')]
+        # Repacked wrappers may contain unrelated files; consume only verified members.
+        names=[n for n in members['camels_gb_2020.zip'] if '/timeseries/' in n and n.endswith('.csv')]
         names.sort(key=lambda n:n.split('_timeseries_')[1].split('_')[0])
         for name in names:
             entity=name.split('_timeseries_')[1].split('_')[0];row=topo.loc[entity]
@@ -141,9 +145,10 @@ def prepare(raw_dir,config_path,acquisition_path,output,allow_container_repack=F
     """Recreate both declared domains at a new output; never overwrite inputs."""
     config=json.loads(Path(config_path).read_text());manifest=json.loads(Path(acquisition_path).read_text())
     checks=verify_raw(raw_dir,manifest,allow_container_repack)
+    members={item['file']:[m['member'] for m in scientific_members(item)] for item in manifest['inputs']}
     output=Path(output);output.mkdir(parents=True,exist_ok=False)
     for name in ['air_quality_2021_2022','hydrology']:
-        arrays,meta=(prepare_hydrology if name=='hydrology' else prepare_air)(raw_dir,config[name])
+        arrays,meta=(prepare_hydrology if name=='hydrology' else prepare_air)(raw_dir,config[name],members)
         path=output/(name+'.npz');np.savez_compressed(path,**arrays)
         save(path.with_suffix('.json'),{'domain':'hydrology' if name=='hydrology' else 'air_quality','entities':meta,'sha256':sha(path),'config':config[name],'source_boundary':'Retained daily products and fixed local transformations; unknown upstream measurement ancestry is not certified.'})
         print('Prepared',name,len(meta),'sources',flush=True)

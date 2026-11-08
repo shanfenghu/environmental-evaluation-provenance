@@ -24,7 +24,8 @@ never replaced. Acquisition requires network access and upstream availability:
 .venv/bin/python experiments/run_source_assessment.py prepare --raw data/raw --output outputs/prepared
 ```
 
-Preparation checks containers and scientific member bytes, applies
+Preparation checks containers and scientific member bytes, reads only those
+declared members regardless of wrapper order, applies
 `configs/preparation-v1.json`, and writes arrays and metadata to a new directory.
 Compare array names, dtypes, shapes and values against the exact frozen arrays.
 A regenerated NPZ container may have different bytes despite identical arrays;
