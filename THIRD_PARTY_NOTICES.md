@@ -20,6 +20,6 @@ https://doi.org/10.5285/8344e4f3-d2ea-44f5-8afa-86d2987543a9
 https://eidc.ac.uk/licences/ogl/plain
 Dataset description: https://doi.org/10.5194/essd-12-2459-2020
 
-The bundled data are derived, filtered arrays from that original release. Exact
-local retention and content verification do not independently certify upstream
-measurement ancestry or a second off-device recovery copy.
+Provider inputs and locally derived arrays remain outside the repository. Local
+retention and content checks do not independently certify upstream measurement
+ancestry or a second off-device recovery copy.

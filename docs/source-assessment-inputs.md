@@ -1,13 +1,13 @@
 # Inputs and attribution
 
-The prepared-input bundle contains the exact two numeric archives used by the
+Local preprocessing creates the two numeric archives used by the
 native recipe: `air_quality_2021_2022.npz` and `hydrology.npz`. Their source-indexed
 arrays contain earlier predictors/responses (`x`, `y`), later predictors/responses
 (`z`, `w`) and date indices (`t`, `s`). Source order, identities, coordinates,
 cell assignments and row counts are retained in the matching metadata. The
 first prepared feature is constant and is dropped by the native loader; the
 resulting native predictor dimensions are 13 and 20. Only hydrological fitting
-responses transform to log1p. Do not replace these pinned inputs silently.
+responses transform to log1p. Record provider and local preprocessing versions when generating new inputs.
 
 EPA nitrogen-dioxide summaries retain 353 sites, fitting in 2021 and scoring in
 2022. Geographic bounds are 25–50 degrees latitude and -125 to -66 longitude;
@@ -29,8 +29,8 @@ establish representative environmental sampling.
 `configs/acquisition-v1.json` retains provider URLs, original container hashes,
 and the exact scientific member hashes used by preparation. `acquire` downloads
 only absent archives and verifies them. Network endpoints are mutable and were
-not freshly downloaded for this candidate. The prepared bundle avoids relying
-on a current server to recover the original numerical inputs.
+not freshly downloaded for this candidate. Provider observations and prepared input copies are not distributed here; obtain
+them from the providers using the data README.
 
 CAMELS download ZIP wrappers may be regenerated with different readme/timestamp
 bytes. Strict mode requires the original container hash. Explicit
@@ -39,12 +39,12 @@ scientific member matches its strong hash; this is NOT recovery of the exact
 original ZIP. A changed used member always fails. Preserve all actual acquired
 bytes separately. `prepare` reads the three explicit raw archives without
 extracting them or importing code from another workspace. Reconstructed arrays
-should match names, dtypes, shapes and values of the prepared bundle; metadata
-formatting and byte fingerprints need not match after neutralisation.
+should recover the declared selections and scientific features; metadata
+formatting and container fingerprints need not match historical local files.
 
-The bundled archives supply the frozen byte-version for exact query-signature
-replay. A content-identical repack with different NPZ bytes has a different
-input version; it does not justify claiming unchanged query identifiers.
+Scientific replay can compare numerical results while allowing regenerated input
+and query fingerprints to differ. Exact fingerprints remain available for auditing
+historical versions; neither mode establishes new-population validation.
 
 EPA AQS/AirData ambient monitoring data are public domain. Source: U.S.
 Environmental Protection Agency, daily nitrogen-dioxide summaries for 2021/2022.
@@ -68,6 +68,6 @@ https://doi.org/10.5285/8344e4f3-d2ea-44f5-8afa-86d2987543a9
 https://eidc.ac.uk/licences/ogl/plain
 Dataset description: https://doi.org/10.5194/essd-12-2459-2020
 
-The bundled data are derived, filtered arrays from that original release. Exact
-local retention and content verification do not independently certify upstream
-measurement ancestry or a second off-device recovery copy.
+Provider inputs and locally derived arrays remain outside the repository. Local
+retention and content checks do not independently certify upstream measurement
+ancestry or a second off-device recovery copy.

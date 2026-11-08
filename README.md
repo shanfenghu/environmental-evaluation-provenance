@@ -47,15 +47,18 @@ command writes four PDFs and five neutral CSV tables, plus arithmetic/point data
 Allocation and overlap CSVs support secondary numerical comparisons. JSON retains
 full precision; displayed decimals are rounded only at export.
 
-With the exact prepared arrays described in `data/README.md`, check all original
-164 source states' retained losses, declared roles, quotas, crossed identities,
-cycle covariance and support before replaying models:
+Download provider inputs and preprocess them using [the data recipe](data/README.md).
+No provider input archives or prepared copies are distributed through this repository
+or release assets. For a practical native check, run the four full fitted states:
 
 ```sh
-.venv/bin/python experiments/run_source_assessment.py verify --output outputs/verification.json
-.venv/bin/python experiments/run_source_assessment.py fit --full-only --output outputs/full-states
-.venv/bin/python experiments/run_source_assessment.py compare --replay outputs/full-states --output outputs/full-states-comparison.json
+.venv/bin/python experiments/run_source_assessment.py fit --data outputs/prepared --full-only --output outputs/full-states
+.venv/bin/python experiments/run_source_assessment.py compare --replay outputs/full-states --scientific --atol 1e-8 --output outputs/full-states-comparison.json
 ```
+
+The comparison retains numerical and source-membership checks while allowing
+regenerated container/query fingerprints to differ. The data README explains the
+comparison tolerance, optional exact-version checks and provider access limits.
 
 For the complete native recipe, omit `--full-only` (164 source states: 328 native
 candidate fits and 164 seasonal fits). `--fixed-cycle` instead replays 24 source
@@ -66,14 +69,12 @@ and at least 2 GiB temporary disk. Whole native runs are substantially slower th
 record reconstruction; their timings depend on hardware and system load.
 
 ```sh
-.venv/bin/python experiments/run_source_assessment.py fit --output outputs/native
-.venv/bin/python experiments/run_source_assessment.py compare --replay outputs/native --output outputs/native-comparison.json
-.venv/bin/python experiments/run_pairing_precision.py --output outputs/pairing-native
-.venv/bin/python experiments/analyze_pairing_precision.py --records outputs/pairing-native --output outputs/pairing-native-analysis.json
-.venv/bin/python experiments/analyze_source_inclusion.py --records outputs/pairing-native --output outputs/pairing-native-profiles
-.venv/bin/python experiments/analyze_assessment_rankings.py --records outputs/pairing-native --output outputs/pairing-native-rankings
-.venv/bin/python experiments/check_pairing_cost_sensitivity.py --output outputs/cost-native
+.venv/bin/python experiments/run_source_assessment.py fit --data outputs/prepared --output outputs/native
+.venv/bin/python experiments/run_source_assessment.py compare --replay outputs/native --scientific --atol 1e-8 --output outputs/native-comparison.json
 ```
+
+The data README also gives the follow-up configuration using those regenerated
+native records, rather than requiring historical input byte fingerprints.
 
 The follow-up executor uses the unchanged 48 recorded seeds and fits 240 source
 states. It predicts two blocks versus all five using the same fitted learners,
