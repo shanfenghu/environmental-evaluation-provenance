@@ -14,6 +14,10 @@ uv pip sync --python .venv/bin/python --require-hashes requirements.lock
 .venv/bin/python experiments/test_source_assessment.py
 ```
 
+If `uv` cannot discover an installed interpreter by version, supply its executable
+path explicitly: `uv venv --python /path/to/python3.12 .venv`. The executable must
+report Python 3.12.14; a managed interpreter download is not required.
+
 The launcher imports only this directory's `src/`; installation is unnecessary.
 The lock pins all numerical and plotting dependencies. No software licence is
 currently granted. Third-party data and dependencies retain their own terms;
