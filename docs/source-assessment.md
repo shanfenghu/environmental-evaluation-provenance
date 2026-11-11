@@ -15,21 +15,37 @@ temporal-reference, entity-held-out or external-held-out roles. A state may
 support different roles on different scored sets. Chronology alone does not
 establish entity exclusion. The guards check declared local execution records,
 not unknown provider lineage or independent environmental measurements. Recipe
-keys are interpreted with the enclosing source/configuration/environment record;
-they are not portable cross-version cache certificates.
+keys hash the declared learner configuration and the seasonal/response-transform
+labels. They do not hash implementation bytes, package versions or the boosting
+seed fixed in `models.py`. Query guards compare the declared key and source/input
+fields; they do not automatically detect changes in those omitted software details.
+
+The enclosing records document selected configuration/environment context. The
+retained original run has an empty `source_sha256` field, and the retained pairing
+run has no implementation source-hash mapping. The supplied records therefore do
+not verify the historical implementation-to-run association for those fitted
+losses. Later analysis hashes identify that analysis, not all earlier fitting.
+Current replay checks numerical consistency; it cannot recover that missing
+historical binding. Historical fields remain unchanged. These keys are not portable
+cross-version cache certificates.
 
 Each source loss averages retained days, then sources within a cell and cells
 equally. Joint learner differences are formed from the same raw losses. For
 validation sources V and disjoint, equal-count W, the direct cell audit is
 `S_c = score(V_c, fit_without_V) - score(V_c, fit_without_W)`.
-The held-out/eligible reference is
+Here `U_c` is the eligible development set in cell `c`, excluding reserved
+external sites and the protected fitted core. The disjoint blocks `V_c` and
+`W_c` are drawn from `U_c`, each with `q_c` sites; remaining eligible sites may
+also contribute to fitting. The held-out/eligible reference is
 `C_c = score(V_c, fit_without_V) - score(U_c, fit_without_V)`.
 Under the uniform symmetric disjoint-pair law,
 `E(S_c) = E(C_c)/(1-q_c/|U_c|)`.
 This is an assignment expectation on retained data, not equality in every
 realised fold or a guarantee for a small empirical forecast.
 
-The cohort file fixes the inherited dispersed external cohort. Northern-edge
+The cohort file fixes the inherited dispersed external cohort using deterministic
+within-cell hash selection. It is not a probability sample or a distance-balanced
+design. Northern-edge
 cohorts are the northernmost fifth within four declared cells. Two fixed-hash
 sources per cell form a protected fitted core. Other sources are partitioned
 into five disjoint quota blocks using fresh recorded cycle seeds; neighbouring

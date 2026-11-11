@@ -1,9 +1,10 @@
 # Source-aware environmental assessment
 
-Research software for retrospective comparisons of fitted-source exclusions on
-fixed later observations. It records source roles, equal-cell/source/day losses,
-paired learner differences, crossed allocations and conditional block-order
-averaging. Read [the methods](docs/source-assessment.md) and
+Compare later prediction errors when different sites' earlier records are left
+out of model fitting. Both fits predict the same later observations: one leaves
+out the scored sites, and the other leaves out equally many different sites in
+each geographic region. The software fits learners, records site-level losses
+and reconstructs the resulting comparisons. Read [the methods](docs/source-assessment.md) and
 [the input guide](data/README.md) before interpreting results.
 
 Use Python 3.12.14 and `uv`. From this directory:
@@ -24,6 +25,14 @@ tests, configuration and documentation use the [MIT licence](LICENSE). Provider
 data, prepared metadata, derived records, dependencies and embedded fonts retain
 their separately applicable terms; see [the attribution](THIRD_PARTY_NOTICES.md).
 
+For a first result, open [the exclusion-change table](tables/source-assessment/exclusion-means.csv).
+Its four rows report original confirmation means by task. Subtract `ridge` from
+`trees`: the extra exclusion-related rise is 1.10–1.26 ppb for air quality and
+0.0626–0.0644 mm/day for flow (rounded). This concerns matched development sites;
+the separate external-error table measures prediction at reserved sites. To
+reconstruct these rows, run the recorded-result commands below and inspect
+`outputs/display/tables/exclusion-means.csv`.
+
 The actual selected [figure PDFs](figures/source-assessment/),
 [readable CSV tables](tables/source-assessment/) and
 [key numerical results](results/source-assessment/) are included. The
@@ -33,7 +42,7 @@ available alongside the code and derived outcome records.
 
 Small reference records and source-indexed losses are included. Prepared arrays
 and provider archives are separate inputs, excluded from Git. Without prepared
-arrays you can still reproduce every recorded aggregate, follow-up and display:
+arrays you can reconstruct the selected numerical summaries and displays:
 
 ```sh
 mkdir -p outputs
@@ -46,11 +55,27 @@ mkdir -p outputs
 .venv/bin/python experiments/run_source_assessment.py render --pairing outputs/precision.json --profiles outputs/profiles --output outputs/display
 ```
 
-Every output path must be new. These commands use the frozen original and
-12-bank follow-up records. The precision bootstrap resamples whole banks jointly;
+These commands reconstruct parallel analyses rather than one chained pipeline.
+`render` reads the retained original records and their summary in
+`records/reference/`; it consumes the regenerated pairing and profile results
+through the two explicit options. It does not read `outputs/summary.json`,
+`orders/`, `rankings/` or `cost/`. Those are separate reconstructions for numerical
+comparison with the selected results; the rendered key table uses the retained
+original summary.
+
+Each destination passed through `--output` must be absent; its shared parent,
+such as `outputs/`, may already exist. These commands use the frozen original and
+12 follow-up banks per task (48 across four tasks). Each original task has eight
+cycles: four for the forecast and four for its direct confirmation. A cycle or
+follow-up bank contains five dependent blocks; those blocks and their days are
+not separate replicates. The forecast uses the first four cycles' held-out-minus-
+all-eligible-site scores, divides each cell's contrast by its retained fraction,
+then averages cells and cycles. Its measurement is the direct own-minus-other
+audit from cycles 5–8 on the same environmental records. `confirmation.pdf`
+plots forecast minus measurement. The precision bootstrap resamples whole banks jointly;
 source profiles report observed coverage without filling missing sources.
 Recorded timing reconstruction performs no fresh timing measurements. The display
-command writes four PDFs and five neutral CSV tables, plus arithmetic/point data.
+command writes four PDFs and six neutral CSV tables, plus arithmetic/point data.
 Allocation and overlap CSVs support secondary numerical comparisons. JSON retains
 full precision; displayed decimals are rounded only at export.
 
@@ -78,7 +103,17 @@ record reconstruction; their timings depend on hardware and system load.
 ```sh
 .venv/bin/python experiments/run_source_assessment.py fit --data outputs/prepared --output outputs/native
 .venv/bin/python experiments/run_source_assessment.py compare --replay outputs/native --scientific --atol 1e-8 --output outputs/native-comparison.json
+.venv/bin/python experiments/run_source_assessment.py summarize --records outputs/native --output outputs/native/summary.json
+PYTHONPATH=src .venv/bin/python - <<'PYTHON'
+from source_assessment.tables import render_tables
+render_tables('outputs/native', 'outputs/native-tables')
+PYTHON
 ```
+
+Read `outputs/native-tables/exclusion-means.csv` for the key table from the
+newly fitted records. This needs the complete original eight-cycle run;
+`--full-only` does not supply the exclusion cycles. The table API writes the
+original-study tables without requiring the separate twelve-bank follow-up.
 
 The data README also gives the follow-up configuration using those regenerated
 native records, rather than requiring historical input byte fingerprints.
@@ -93,8 +128,11 @@ population, independent replication or deployment evidence.
 
 The reference records retain failed finite-half forecasts, weak/mixed ridge
 contrasts, unchanged learner rankings, source heterogeneity, observed SD increases
-and uncertain timing-adjusted benefit. Lower external prediction error can coexist
-with greater exclusion sensitivity. Matching site counts does not match daily
+and endpoint-dependent timing-adjusted results: the primary trees-minus-ridge
+contrast has no clear benefit from extra scoring, while several secondary ridge
+endpoints have descriptive gains under the same joint three-learner cost.
+Lower external prediction error can coexist with greater exclusion sensitivity.
+Matching site counts does not match daily
 row counts, geography or histories. Conditional averaging removes fold-order
 variation; it does not remove bank-selection or population uncertainty. Crossed
 allocations depend on the chosen path, and overlap diagnostics have a different

@@ -16,6 +16,13 @@ completeness, with deterministic tie-breaking. Ambiguous site dates and coordina
 drift are excluded; each year needs at least 300 retained valid days. Negative
 reported means are retained. Geographic cuts are latitude 39 and longitude -100.
 
+The 13 EPA predictors are fixed coordinate and seasonal terms. With
+`u = (latitude - 40)/10`, `v = (longitude + 20)/50` and
+`a = 2*pi*day_of_year/365.25`, they are `u`, `v`, `u*u`, `v*v`, `u*v`,
+`sin(a)`, `cos(a)`, `sin(2*a)`, `cos(2*a)`, `u*sin(a)`, `u*cos(a)`,
+`v*sin(a)` and `v*cos(a)`. The constant column produced during preparation
+is removed before fitting. These predictors contain no earlier response values.
+
 The original CAMELS-GB 2020 release supplies 618 retained catchments. Fitting is
 1995-10-01–2005-09-30 and scoring 2005-10-01–2015-09-30, with at least 90% valid
 days in each period. Negative flow and nonfinite response/predictor rows are
@@ -26,10 +33,19 @@ elevation. Contemporary observed forcings make this retrospective assessment;
 they are not an operational forecasting promise. Completeness filters do not
 establish representative environmental sampling.
 
+Hydrology uses the same 13 coordinate/seasonal terms plus seven features:
+`log1p(P)/3`, `log1p(mean7(P))/3`, `log1p(mean30(P))/3`, `temperature/10`,
+`PET/3`, `log1p(area)/5` and `elevation/500`. Here `P` is precipitation. The
+rolling means use the current and preceding rows in the date-sorted provider
+series, with windows of seven/thirty rows and `min_periods` equal to the full
+window length. They are computed before the fitting/scoring periods are selected;
+rows with nonfinite features are then excluded. This gives the 20 native
+predictors after removing the constant column.
+
 `configs/acquisition-v1.json` retains provider URLs, original container hashes,
 and the exact scientific member hashes used by preparation. `acquire` downloads
-only absent archives and verifies them. Network endpoints are mutable and were
-not freshly downloaded for this candidate. Provider observations and prepared input copies are not distributed here; obtain
+only absent archives and verifies them. Network endpoints are mutable; a catalogue link alone does not verify
+a complete download. Provider observations and prepared input copies are not distributed here; obtain
 them from the providers using the data README.
 
 CAMELS download ZIP wrappers may be regenerated with different readme/timestamp

@@ -33,20 +33,35 @@ CC BY licence is distinct from the data licence. No provider endorsement is impl
 `configs/preparation-v1.json` defines the transformations; the implementation is
 `src/source_assessment/prepare.py`. EPA uses the continental bounds 25–50 degrees
 latitude and -125 to -66 longitude, at least 18 observations per day and 300 valid
-days in each year. It chooses a site's POC by earlier-year completeness with
-stable tie-breaking, removes duplicate dates and coordinate drift, and retains
-353 sites in the recorded version. Fitting uses 2021; scoring uses 2022.
+days in each year. It chooses one POC (Parameter Occurrence Code) per site by earlier-year
+qualifying record count, breaking ties by code. It rejects the selected site/POC series if dates repeat or
+coordinates change; it does not deduplicate rows. The recorded version retains
+353 sites. Its response is the provider's daily `Arithmetic Mean`, in ppb. Fitting uses 2021; scoring uses 2022.
 
-CAMELS-GB uses daily specific discharge and declared meteorological/static
+CAMELS-GB uses daily specific discharge (`discharge_spec`), catchment-area-normalised
+flow in mm/day, and declared meteorological/static
 features, fitting 1995-10-01 through 2005-09-30 and scoring 2005-10-01 through
 2015-09-30. At least 90% valid rows are required in each period; negative flow and
 nonfinite predictors/responses are excluded. The recorded selection has 618
 catchments. Seasonal/coordinate features and rolling precipitation transforms
 are fixed before fitting. Hydrological fitting responses use log1p, with clipped
-inverse predictions. Contemporary forcings support retrospective assessment.
+inverse predictions. Earlier responses supply pooled training examples, not explicit
+site-specific lagged-response predictors. Contemporary forcings support retrospective
+assessment.
 See [input definitions](../docs/source-assessment-inputs.md) for the feature and
 source-role boundaries. Geographic cells and scoring weights are fixed by the
 configuration, not inferred from model performance.
+
+The four cells split EPA coordinates at latitude 39 and longitude -100, and
+CAMELS-GB at latitude 53.5 and longitude -2.5. Equality goes north/east.
+For each cell, the dispersed external cohort is the first `floor(n/5)` site IDs
+in ascending `sha256(f"{seed}:{site_id}".encode()).hexdigest()` order, with seed
+301 for EPA and 41 for CAMELS-GB. This reconstructs the retained cohort lists
+exactly. It is a fixed inherited identity rule, not distance balancing or a
+probability sample of environmental sites. The northern-edge cohort instead
+takes the northernmost `floor(n/5)` IDs per cell, breaking latitude ties by ID.
+These fixed cohort selections are distinct from the later random cycle
+assignments of eligible development sites. Each cell receives scoring weight 1/4.
 
 ## Download and prepare
 
@@ -98,7 +113,13 @@ source memberships, counts, recipes and allocations. It excludes elapsed timings
 metadata fingerprints and input/query digests that legitimately change when inputs
 are regenerated. The output records both input versions. Absolute tolerance 1e-8
 is far below the reported result precision in either response unit; a failure
-requires investigation, not automatic widening. Different software or provider
+requires investigation, not automatic widening. A successful `compare` exits with
+status zero and writes `complete: true`. For the documented `--full-only` check,
+inspect `stage: "full_only"`, `cases: 4`, `native_source_states_replayed: 4` and
+`full_native_run_replayed: false`: the check covers four full fits, not the
+whole exclusion experiment. `maximum_absolute_numeric_difference` must not exceed
+`absolute_tolerance`. A failed comparison raises an error and exits nonzero.
+Different software or provider
 versions may produce larger changes. These checks establish neither statistical
 coverage nor new-population replication. Omit `--scientific` for the optional exact
 input-version check; `verify` likewise audits the historical fingerprinted losses

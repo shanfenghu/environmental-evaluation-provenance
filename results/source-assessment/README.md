@@ -18,12 +18,18 @@ EPA errors use ppb; hydrological errors use mm/day.
   predicted-minus-measured contrasts, including the failed EPA forecasts.
 - [External errors](../../tables/source-assessment/external.csv) retain all three
   learners' full-fit external MAEs.
+- [Raw exclusion changes](../../tables/source-assessment/exclusion-means.csv) retain
+  each learner's own-minus-other exclusion MAE, averaged over the original four
+  confirmation cycles per task. These are changes on matched development sites,
+  not external errors or the twelve-bank follow-up. Subtracting learner columns
+  gives the relative confirmation contrasts.
 - [Allocations](../../tables/source-assessment/allocation.csv) retain coupling,
   refit, cohort and total-gap components for the trees-minus-ridge comparison.
 - [Overlap](../../tables/source-assessment/overlap.csv) distinguishes the fixed-model
   decomposition from the exclusion comparison and labels unsupported edge cases.
 - [Precision and cost](../../tables/source-assessment/precision-cost.csv) retain
-  the uncertain timing-adjusted comparison, not a general speed or precision claim.
+  the primary trees-minus-ridge timing-adjusted comparison, using joint
+  three-learner timing costs.
 - [Source profiles](../../tables/source-assessment/source-profiles.csv) retain
   heterogeneous source contrasts, their quantiles and trimmed summaries.
 
@@ -49,7 +55,9 @@ Provider and other required credit remain in [the notices](../../THIRD_PARTY_NOT
 - [summary.json](summary.json): original joint summaries, covariance/uncertainty,
   confirmation comparisons, external errors and secondary allocations.
 - [precision.json](precision.json): 48-bank conditional averaging, descriptive
-  whole-bank bootstrap ranges, timings and uncertain precision–cost benefit.
+  whole-bank bootstrap ranges and timings for six endpoints. The primary
+  trees-minus-ridge contrast has no clear timing-adjusted benefit; several
+  secondary ridge endpoints have descriptive gains using the same joint cost.
 - [orders/analysis.json](orders/analysis.json): conditional order enumeration,
   cyclic comparisons and order sensitivity.
 - [profiles/run.json](profiles/run.json) and its four case files: source-level
@@ -74,7 +82,7 @@ into a new `outputs/` tree. They require no provider input download or model fit
 The generated file mapping is:
 
 - `outputs/display/figures/*.pdf` to `figures/source-assessment/`.
-- The five numerical `outputs/display/tables/*.csv` files to `tables/source-assessment/`.
+- The six numerical `outputs/display/tables/*.csv` files to `tables/source-assessment/`.
   The six authored reference CSVs are retained directly, without a numerical generator.
 - `outputs/summary.json`, `precision.json`, `orders/`, `profiles/`, `rankings/` and
   `cost/` to the corresponding paths in `results/source-assessment/`.
