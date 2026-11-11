@@ -1,0 +1,5 @@
+workload,task,panel,cycles,unit,ridge,trees,seasonal
+air_quality_2021_2022,dispersed,original_confirmation,4,ppb,+0.0633,+1.1599,+0.0438
+air_quality_2021_2022,northern_edge,original_confirmation,4,ppb,+0.0811,+1.3405,+0.0602
+hydrology,dispersed,original_confirmation,4,mm/day,+0.00274,+0.06715,+0.00296
+hydrology,northern_edge,original_confirmation,4,mm/day,+0.00229,+0.06492,+0.00340

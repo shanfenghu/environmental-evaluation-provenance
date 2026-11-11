@@ -12,6 +12,21 @@ from source_assessment.prepare import prepare_air, prepare_hydrology, verify_raw
 
 
 class PreparationTests(unittest.TestCase):
+    def test_duplicate_day_rejects_selected_monitor_series(self):
+        header='State Code,County Code,Site Num,POC,Latitude,Longitude,Observation Count,Date Local,Arithmetic Mean\n'
+        rows=('01,001,0001,1,40,-80,24,2021-01-01,3\n'
+              '01,001,0001,1,40,-80,24,2021-01-01,3\n'
+              '01,001,0001,1,40,-80,24,2022-01-01,4\n')
+        cfg={'archives':['input.zip'],'latitude_bounds':[25,50],'longitude_bounds':[-125,-66],
+             'minimum_observations_per_day':18,'years':[2021,2022],
+             'minimum_days_each_period':1,'geo_cut_lat':39,'geo_cut_lon':-100}
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            with zipfile.ZipFile(root/'input.zip','w') as z:z.writestr('values.csv',header+rows)
+            arrays,meta=prepare_air(root,cfg,{'input.zip':['values.csv']})
+            self.assertEqual(arrays,{})
+            self.assertEqual(meta,[])
+
     def test_repacked_air_archive_ignores_wrapper_order_and_unlisted_csv(self):
         header='State Code,County Code,Site Num,POC,Latitude,Longitude,Observation Count,Date Local,Arithmetic Mean\n'
         value=(header+'01,001,0001,1,40,-80,24,2021-01-01,3\n'+

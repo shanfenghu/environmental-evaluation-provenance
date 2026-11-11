@@ -13,7 +13,7 @@ def write_csv(path, header, rows):
 
 
 def render_tables(results, output, pairing=None, profiles=None):
-    """Render external scores, allocations and optional follow-up summaries.
+    """Render external scores, confirmation loss changes and follow-up summaries.
 
     Decimal rounding is display-only. The JSON records retain full precision;
     bootstrap ranges describe whole-bank resampling conditional on these data.
@@ -21,10 +21,17 @@ def render_tables(results, output, pairing=None, profiles=None):
     results, output = Path(results), Path(output)
     output.mkdir(parents=True, exist_ok=True)
     summary = json.loads((results/'summary.json').read_text())
-    external, allocation, overlap = [], [], []
+    external, allocation, overlap, exclusion = [], [], [], []
     for item in summary['cases']:
         label = [item['workload'], item['task']]
         external.append(label+[f'{x:.3f}' for x in item['target'][:3]])
+        measured = item.get('followup', {}).get('last_four_measured_exclusion')
+        if measured is not None:
+            # These are own-minus-other loss changes, not full-fit external MAEs.
+            digits = 5 if item['workload'] == 'hydrology' else 4
+            unit = 'mm/day' if item['workload'] == 'hydrology' else 'ppb'
+            exclusion.append(label+['original_confirmation', 4, unit]+
+                             [f'{x:+.{digits}f}' for x in measured[:3]])
         v = item['joint']['mean']
         allocation.append(label+[f'{v[j][5]:+.4f}' for j in range(3)]+
                           [f"{v[item['field_slices']['gap'][0]][5]:+.4f}"])
@@ -33,6 +40,9 @@ def render_tables(results, output, pairing=None, profiles=None):
         else:
             overlap.append(label+['No observed latitude overlap']*3)
     write_csv(output/'external.csv', ['workload','task','ridge','trees','seasonal'], external)
+    if exclusion:
+        write_csv(output/'exclusion-means.csv',
+                  ['workload','task','panel','cycles','unit','ridge','trees','seasonal'], exclusion)
     write_csv(output/'allocation.csv', ['workload','task','coupling','refit','cohort','gap'], allocation)
     write_csv(output/'overlap.csv', ['workload','task','source_edge','conditional','target_edge'], overlap)
     if pairing is not None:

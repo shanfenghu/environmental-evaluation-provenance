@@ -47,7 +47,7 @@ def render(directory, output):
                'canvas_inches':[3.45,3.55], 'series_markers':markers, 'points':[]}
     for display in ['direct','order','confirmation']:
         fig,axes = plt.subplots(2,1,figsize=(3.45,3.55),layout='constrained')
-        labels = legend_labels if display!='order' else ['Forward path','Reverse path','Shapley average']
+        labels = legend_labels if display!='order' else ['Forward: fit first','Reverse: cohort first','Shapley average']
         for wi,ax in enumerate(axes):
             ax.axvline(0,color='.65',linewidth=.7)
             for ti in range(2):
@@ -77,9 +77,9 @@ def render(directory, output):
                                               'mean':float(v),'low':float(lo),'high':float(hi),
                                               **({'cycle_values':values.tolist()} if display=='direct' else {})})
             unit='ppb' if wi==0 else 'mm/day'
-            ax.set_yticks([1,0],['Dispersed','Northern edge'])
+            ax.set_yticks([1,0],['Dispersed','Edge'])
             ax.set_ylim(-.4,1.5)
-            domain='EPA' if wi==0 else 'CAMELS-GB'
+            domain='US station NO$_2$' if wi==0 else 'GB specific discharge'
             ax.set_title(f'{domain} ({unit})' if display=='order' else domain,fontsize=9)
             title={'direct':'Matched exclusion contrast','order':'Training allocation: trees − ridge',
                    'confirmation':'Predicted − measured contrast'}[display]

@@ -81,6 +81,20 @@ class FollowupTests(unittest.TestCase):
             self.assertEqual(rows[0],['workload','task','coupling','refit','cohort','gap'])
             self.assertEqual(rows[1][2:],['+1.0000','+2.0000','+3.0000','+6.0000'])
 
+    def test_confirmation_table_keeps_raw_changes_and_direction(self):
+        # A positive relative contrast can hide a negative raw learner change.
+        item={'workload':'air_quality_2021_2022','task':'dispersed',
+              'target':[4.,5.,6.], 'joint':{'mean':[[0.]*6]*4},
+              'field_slices':{'gap':[3,4]},'disde':{'components':[[0.]*6]*3},
+              'followup':{'last_four_measured_exclusion':[-1.25,2.5,.75,-2.,1.75,3.75]}}
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory); (root/'summary.json').write_text(json.dumps({'cases':[item]}))
+            render_tables(root,root/'tables')
+            rows=list(csv.reader((root/'tables/exclusion-means.csv').open()))
+            self.assertEqual(rows[0],['workload','task','panel','cycles','unit','ridge','trees','seasonal'])
+            self.assertEqual(rows[1],['air_quality_2021_2022','dispersed','original_confirmation',
+                                      '4','ppb','-1.2500','+2.5000','+0.7500'])
+
     def test_constructed_histories_have_opposite_matched_contrasts(self):
         _,states,_,ordinary,swaps,_,_=illustration()
         self.assertEqual([len(s) for s in states],[6,4,4])
